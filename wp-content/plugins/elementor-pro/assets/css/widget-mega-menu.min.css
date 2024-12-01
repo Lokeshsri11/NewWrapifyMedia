@@ -316,7 +316,7 @@
 
 .elementor-widget-n-menu .e-n-menu-title.e-current,
 .elementor-widget-n-menu .e-n-menu-title.e-current a {
-    color: var(--n-menu-title-color-active)
+    color: #0451f7;
 }
 
 .elementor-widget-n-menu .e-n-menu-title.e-current .icon-inactive {
@@ -536,7 +536,7 @@
 
 .elementor-widget-n-menu .e-n-menu[data-layout=dropdown] .e-n-menu-title.e-current,
 .elementor-widget-n-menu .e-n-menu[data-layout=dropdown] .e-n-menu-title.e-current a {
-    color: var(--n-menu-title-active-color-dropdown)
+    color: #0451f7;
 }
 
 .elementor-widget-n-menu .e-n-menu[data-layout=dropdown] .e-n-menu-title.e-current .e-n-menu-dropdown-icon i {
