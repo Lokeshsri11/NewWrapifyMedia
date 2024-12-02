@@ -5444,7 +5444,7 @@ flexibility(document.documentElement);
                                         <li class="e-n-menu-item"></li>
                                             <div id="e-n-menu-title-1156" class="e-n-menu-title">
                                                 <a class="e-n-menu-title-container e-focus e-link"
-                                                    href="">100 Day's Plan <span
+                                                    href="/100Days.html">100 Day's Plan <span
                                                         class="e-n-menu-title-text">
                                                          </span>
                                                 </a>
@@ -6060,44 +6060,6 @@ flexibility(document.documentElement);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <style>
     /* Base Styling */
     body {
@@ -6106,6 +6068,7 @@ flexibility(document.documentElement);
       padding: 0;
       background-color: #121212;
       color: #fff;
+      line-height: 1.6;
     }
 
     .challenge-container {
@@ -6125,11 +6088,12 @@ flexibility(document.documentElement);
       color: #0451f7;
       margin-bottom: 20px;
       font-weight: bold;
+      text-transform: uppercase;
     }
 
     .challenge-header p {
       font-size: 18px;
-      color: #ddd;
+      color: #ccc;
     }
 
     /* Challenge Section */
@@ -6139,20 +6103,21 @@ flexibility(document.documentElement);
       border-radius: 10px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       margin-bottom: 50px;
+      text-align: center;
     }
 
     .challenge-section h2 {
       font-size: 32px;
       color: #0451f7;
       margin-bottom: 20px;
-      text-align: center;
+      font-weight: bold;
     }
 
     .challenge-section p {
       font-size: 16px;
       color: #ccc;
       line-height: 1.8;
-      text-align: center;
+      margin-bottom: 30px;
     }
 
     .highlight {
@@ -6160,7 +6125,63 @@ flexibility(document.documentElement);
       font-weight: bold;
     }
 
-    /* 3 Key Benefits Grid */
+    /* Price Tag Section */
+    .price-tag {
+      background: linear-gradient(145deg, #507fff, #024091);
+      padding: 30px;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      margin-top: 30px;
+      text-align: center;
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .eligibility-steps h2{
+        color: white;
+    }
+
+    .price-tag:hover {
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .price-tag .old-price {
+      text-decoration: line-through;
+      font-size: 22px;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .price-tag .new-price {
+        font-size: 22px;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .price-tag .per-day {
+      font-size: 48px;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .price-tag .small-text {
+      font-size: 16px;
+      color: #fff;
+    }
+
+    .price-tag .highlight {
+      font-size: 20px;
+      color: #fff;
+      margin-top: 10px;
+    }
+
+    /* Benefits and Value */
     .benefits-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -6170,7 +6191,7 @@ flexibility(document.documentElement);
 
     .benefit-card {
       background: #333;
-      padding: 20px;
+      padding: 25px;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -6186,94 +6207,30 @@ flexibility(document.documentElement);
       font-size: 24px;
       color: #0451f7;
       margin-bottom: 10px;
+      font-weight: bold;
     }
 
     .benefit-card p {
       font-size: 16px;
       color: #ccc;
     }
-
-    /* Price Offer Tag */
-    .price-tag {
-      background-color: #ff7f50;
-      padding: 20px;
-      border-radius: 10px;
-      color: #fff;
-      font-size: 24px;
-      font-weight: bold;
-      display: inline-block;
-      margin-top: 30px;
-      text-align: center;
-      width: 100%;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    }
-
-    .price-tag .price {
-      font-size: 36px;
-      margin: 10px 0;
-    }
-
-    .price-tag .small-text {
+    .steps-list  li {
       font-size: 16px;
-      color: #ccc;
-    }
-
-    .price-tag .highlight {
-      font-size: 24px;
-      color: #fff;
-    }
-
-    /* Eligibility and Steps Section */
-    .eligibility-steps {
-      background-color: #1a1a1a;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      margin-top: 50px;
-    }
-
-    .eligibility-steps h2 {
-      font-size: 32px;
-      color: #0451f7;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .steps-list {
-      margin-top: 30px;
-    }
-
-    .steps-list ol {
-      font-size: 16px;
-      color: #ccc;
-      line-height: 1.8;
-    }
-
-    .steps-list li {
-      margin-bottom: 10px;
-    }
-
-    /* Call to Action Button */
-    .cta-button {
-      display: block;
-      background-color: #0451f7;
-      color: #fff;
-      padding: 15px 30px;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 10px;
-      margin-top: 30px;
-      font-size: 18px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #ff7f50;
+      color: #f5f3f3;
+      padding-left: 20px;
+      position: relative;
     }
 
     /* Responsive Styling */
     @media (max-width: 1024px) {
+      .price-tag .new-price {
+        font-size: 32px;
+      }
+
+      .price-tag .per-day {
+        font-size: 40px;
+      }
+
       .benefits-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -6288,6 +6245,14 @@ flexibility(document.documentElement);
     }
 
     @media (max-width: 768px) {
+      .price-tag .new-price {
+        font-size: 28px;
+      }
+
+      .price-tag .per-day {
+        font-size: 36px;
+      }
+
       .benefits-grid {
         grid-template-columns: 1fr;
       }
@@ -6299,13 +6264,17 @@ flexibility(document.documentElement);
       .challenge-section h2 {
         font-size: 24px;
       }
-
-      .cta-button {
-        padding: 12px 25px;
-      }
     }
 
     @media (max-width: 480px) {
+      .price-tag .new-price {
+        font-size: 24px;
+      }
+
+      .price-tag .per-day {
+        font-size: 30px;
+      }
+
       .cta-button {
         padding: 10px 20px;
       }
@@ -6331,18 +6300,16 @@ flexibility(document.documentElement);
         This 100-day challenge ensures:
       </p>
 
+      <!-- Benefits and Value -->
       <div class="benefits-grid">
-        <!-- Benefit 1 -->
         <div class="benefit-card">
           <h3>Increased Local Visibility</h3>
           <p>More customers will find you through optimized GMB and social media efforts.</p>
         </div>
-        <!-- Benefit 2 -->
         <div class="benefit-card">
           <h3>High-Quality Leads</h3>
           <p>Attract highly interested and high-converting leads to your business.</p>
         </div>
-        <!-- Benefit 3 -->
         <div class="benefit-card">
           <h3>Sustained Growth</h3>
           <p>By retaining new customers through loyalty programs, you create a steady flow of business beyond the festive season.</p>
@@ -6352,36 +6319,18 @@ flexibility(document.documentElement);
 
     <div class="divider"></div>
 
-    <!-- Biggest Problems & Solutions Section -->
-    <div class="challenge-section">
-      <h2>Biggest Problems for Car Detailers in India</h2>
-      <p><strong>1. Market Awareness and Education:</strong> Many car owners are unaware of professional detailing services.</p>
-      <p><strong>2. Skilled Labor Shortage:</strong> A shortage of trained workers leads to inconsistent service quality.</p>
-      <p><strong>3. Competition from the Informal Sector:</strong> Informal detailing services often undercut professional services with lower prices.</p>
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- Case Study Section -->
-    <div class="challenge-section">
-      <h2>Case Studies: Success Stories</h2>
-      <p>Learn from top players in the industry:</p>
-      <p><strong>Detailing Mafia:</strong> A comprehensive marketing approach with franchising, high-quality products, customer loyalty programs, and professional training.</p>
-      <p><strong>Detailing Devils:</strong> Strong digital presence with SEO, social media, content marketing, and customer engagement strategies.</p>
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- Price Offer Section -->
+    <!-- Price Tag Section -->
     <div class="price-tag">
-      <p class="price">₹32,000 - ₹49,999/Month</p>
-      <p class="small-text">Cost of Wash per Day: ₹499</p>
-      <p class="highlight">50% - 100% Growth in Revenue After 100 Days</p>
+      <p class="old-price">₹32,000/Month</p>
+      <p class="new-price">₹49,999 for 100 Days</p>
+      <p class="per-day">₹499 per Day</p>
       <p class="small-text">Excluding Ad Budget Per Month*</p>
+      <p class="highlight">Cost of Wash = Cost of Plan per Day</p>
     </div>
 
     <div class="divider"></div>
-
+<br>
+<br>
     <!-- Eligibility & Steps Section -->
     <div class="eligibility-steps">
       <h2>How to Start</h2>
@@ -6399,6 +6348,44 @@ flexibility(document.documentElement);
   </div>
 
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
