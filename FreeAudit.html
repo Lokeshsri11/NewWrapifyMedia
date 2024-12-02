@@ -5159,7 +5159,7 @@ flexibility(document.documentElement);
                                         </li>
                                         <li class="e-n-menu-item">
                                             <div id="e-n-menu-title-1152" class="e-n-menu-title">
-                                               <a class="e-n-menu-title-container e-focus e-link"
+                                                <a class="e-n-menu-title-container e-focus e-link"
                                                     href="/About.html"> <span
                                                         class="e-n-menu-title-text">
                                                         About </span>
@@ -5425,7 +5425,7 @@ flexibility(document.documentElement);
                                         </li> -->
                                         <li class="e-n-menu-item">
                                             <div id="e-n-menu-title-1154" class="e-n-menu-title">
-                                                 <a class="e-n-menu-title-container e-focus e-link"
+                                                <a class="e-n-menu-title-container e-focus e-link"
                                                     href="/Services.html"> <span
                                                         class="e-n-menu-title-text">
                                                         Services</span>
@@ -5434,7 +5434,7 @@ flexibility(document.documentElement);
                                         </li>
                                         <li class="e-n-menu-item">
                                             <div id="e-n-menu-title-1155" class="e-n-menu-title">
-                                               <a class="e-n-menu-title-container e-focus e-link"
+                                                <a class="e-n-menu-title-container e-focus e-link"
                                                     href="/FreeAudit.html"> <span
                                                         class="e-n-menu-title-text">
                                                         Free Audit  </span>
@@ -5486,7 +5486,7 @@ flexibility(document.documentElement);
                                         <a href="" aria-current="page"
                                             class="elementor-item elementor-item-active menu-link">Home</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-121">
-                                       <a href="/About.html"
+                                        <a href="/About.html"
                                             class="elementor-item menu-link">About</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2164">
                                         <a href="/Services.html"
@@ -5688,7 +5688,7 @@ flexibility(document.documentElement);
                                                             <path
                                                                 d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
                                                         </svg></span>Checkout</a></li>
-                                        </ul>
+                                        </ul>id
                                     </li> -->
                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-132"></li>
                                         <a href="/FAQ's.html"
@@ -5723,7 +5723,7 @@ flexibility(document.documentElement);
                                             class="elementor-item elementor-item-active menu-link"
                                             tabindex="-1">Home</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-121">
-                                         <a href="/About.html" class="elementor-item menu-link"
+                                        <a href="/About.html" class="elementor-item menu-link"
                                             tabindex="-1">About</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2164">
                                         <a href="" class="elementor-item menu-link"
@@ -5980,132 +5980,234 @@ flexibility(document.documentElement);
 
 
 
-  <style>
 
 
+
+
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    /* Base Styling */
     body {
-      font-family: Arial, sans-serif;
-      margin-top: 60px;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #161616;
+      background-color: #121212;
+      color: #fff;
+      line-height: 1.6;
     }
 
-    .faq-section {
+    .audit-container {
       max-width: 800px;
       margin: 50px auto;
-      background-color: rgb(0, 0, 0);
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       padding: 20px;
-    }
-
-    .faq-header {
-      font-size: 24px;
-      font-weight: bold;
-      color: #0451f7;
       text-align: center;
+    }
+
+    /* Header Styling */
+    .audit-header {
+      margin-bottom: 40px;
+    }
+
+    .audit-header h1 {
+      font-size: 48px;
+      color: #0451f7;
       margin-bottom: 20px;
+      text-transform: uppercase;
     }
 
-    .faq {
-      margin: 10px 0;
-      border: 1px solid #0451f7;
-      border-radius: 5px;
-      overflow: hidden;
-    }
-
-    .faq-question {
-      background-color: #0451f7;
-      color: rgb(37, 34, 34);
-      padding: 15px;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .audit-header p {
       font-size: 18px;
+      color: #ccc;
     }
 
-    .faq-answer {
-      display: none;
-      padding: 15px;
-      font-size: 16px;
-      background-color: #f0f8ff;
-      color: #333;
+    /* Link Submission Form */
+    .link-form, .details-form {
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      margin-bottom: 30px;
+      text-align: center;
     }
 
-    .faq .faq-icon {
-      font-size: 20px;
-      transition: transform 0.3s ease;
-    }
-
-    .faq.open .faq-icon {
-      transform: rotate(45deg);
-    }
-
-    .faq.open .faq-answer {
+    .link-form label, .details-form label {
       display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #ddd;
+    }
+
+    .link-form input, .details-form input {
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: none;
+      background-color: #2e2e2e;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .link-form button, .details-form button {
+      background-color: #0451f7;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .link-form button:hover, .details-form button:hover {
+      background-color: #ff7f50;
+    }
+
+    /* Hidden Form Initially */
+    .details-form {
+      display: none;
     }
   </style>
-
+</head>
 <body>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-  <div class="faq-section">
-    <div class="faq-header">Frequently Asked Questions</div>
 
-    <div class="faq">
-      <div class="faq-question">
-        <span>What services do you offer to car detailers?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-answer">
-        We provide a full suite of digital marketing services, including social media management, ad campaigns, SEO, and branding tailored specifically for car detailing businesses.
-      </div>
+  <div class="audit-container">
+    <!-- Header -->
+    <div class="audit-header">
+      <h1>Free Audit</h1>
+      <p>Paste your Instagram, GMB, or Website link to get started with your free audit.</p>
     </div>
 
-    <div class="faq">
-      <div class="faq-question">
-        <span>How do you help car detailers get more customers?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-answer">
-        We create targeted advertising campaigns and optimize your online presence to attract local customers looking for car detailing services.
-      </div>
+    <!-- Link Submission Form -->
+    <div class="link-form">
+      <form id="linkSubmissionForm">
+        <label for="link">Paste Your Link (Instagram, GMB, or Website):</label>
+        <input type="url" id="link" name="link" placeholder="https://example.com" required>
+        <button type="button" id="submitLink">Submit Link</button>
+      </form>
     </div>
 
-    <div class="faq">
-      <div class="faq-question">
-        <span>Can I track the results of your marketing efforts?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-answer">
-        Yes, we provide detailed analytics and reports, showing how your campaigns are performing and helping you make informed decisions.
-      </div>
-    </div>
+    <!-- Details Form -->
+    <div class="details-form" id="detailsForm">
+      <h2>Provide Additional Details</h2>
+      <form action="https://formsubmit.co/22e9aeaeef6301722534548289224e1c" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-    <div class="faq">
-      <div class="faq-question">
-        <span>Do you offer customized plans?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-answer">
-        Absolutely! We tailor our services to meet the unique needs of each car detailer we work with, ensuring maximum impact.
-      </div>
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="linkDetails">Link:</label>
+        <input type="url" id="linkDetails" name="link" readonly>
+
+        <button type="submit">Submit Details</button>
+      </form>
     </div>
   </div>
 
   <script>
-    document.querySelectorAll('.faq-question').forEach(question => {
-      question.addEventListener('click', () => {
-        const faq = question.parentElement;
-        faq.classList.toggle('open');
-      });
+    // Get references to elements
+    const linkForm = document.getElementById('linkSubmissionForm');
+    const detailsForm = document.getElementById('detailsForm');
+    const linkInput = document.getElementById('link');
+    const linkDetailsInput = document.getElementById('linkDetails');
+    const submitLinkButton = document.getElementById('submitLink');
+
+    // Handle Link Submission
+    submitLinkButton.addEventListener('click', function () {
+      const userLink = linkInput.value;
+
+      // Validate the link
+      if (!userLink || !userLink.startsWith('http')) {
+        alert('Please enter a valid link.');
+        return;
+      }
+
+      // Update the second form's link field
+      linkDetailsInput.value = userLink;
+
+      // Show the second form
+      detailsForm.style.display = 'block';
+
+      // Optionally, send the link separately via FormSubmit
+      fetch("https://formsubmit.co/ajax/22e9aeaeef6301722534548289224e1c", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: "application/json",
+        },
+        body: JSON.stringify({ link: userLink }),
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Link submitted:', data);
+        })
+        .catch(error => {
+          console.error('Error submitting link:', error);
+        });
     });
   </script>
+
 </body>
 
 
@@ -6189,7 +6291,6 @@ flexibility(document.documentElement);
 
 
 
-        
 
 
 
@@ -6202,7 +6303,18 @@ flexibility(document.documentElement);
 
 
 
-        <footer data-elementor-type="footer" data-elementor-id="119"
+
+
+
+
+
+
+
+
+
+
+<!-- footer -->
+  <footer data-elementor-type="footer" data-elementor-id="119"
         class="elementor elementor-119 elementor-location-footer" data-elementor-post-type="elementor_library">
         <div class="elementor-element elementor-element-3f35cea e-flex e-con-boxed e-con e-parent" data-id="3f35cea"
             data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -7244,3 +7356,49 @@ flexibility(document.documentElement);
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

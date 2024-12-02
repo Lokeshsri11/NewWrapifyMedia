@@ -5425,7 +5425,7 @@ flexibility(document.documentElement);
                                         </li> -->
                                         <li class="e-n-menu-item">
                                             <div id="e-n-menu-title-1154" class="e-n-menu-title">
-                                                 <a class="e-n-menu-title-container e-focus e-link"
+                                                <a class="e-n-menu-title-container e-focus e-link"
                                                     href="/Services.html"> <span
                                                         class="e-n-menu-title-text">
                                                         Services</span>
@@ -5486,7 +5486,7 @@ flexibility(document.documentElement);
                                         <a href="" aria-current="page"
                                             class="elementor-item elementor-item-active menu-link">Home</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-121">
-                                       <a href="/About.html"
+                                        <a href="/About.html"
                                             class="elementor-item menu-link">About</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2164">
                                         <a href="/Services.html"
@@ -5688,12 +5688,12 @@ flexibility(document.documentElement);
                                                             <path
                                                                 d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
                                                         </svg></span>Checkout</a></li>
-                                        </ul>
+                                        </ul>id
                                     </li> -->
                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-132"></li>
                                         <a href="/FAQ's.html"
                                             class="elementor-item menu-link">FAQ's</a></li>
-                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-132">
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-132">
                                         <a href="/contactus.html"
                                             class="elementor-item menu-link">Contact Us</a></li>
                                 </ul>
@@ -5723,7 +5723,7 @@ flexibility(document.documentElement);
                                             class="elementor-item elementor-item-active menu-link"
                                             tabindex="-1">Home</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-121">
-                                         <a href="/About.html" class="elementor-item menu-link"
+                                        <a href="/About.html" class="elementor-item menu-link"
                                             tabindex="-1">About</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2164">
                                         <a href="" class="elementor-item menu-link"
@@ -5980,132 +5980,300 @@ flexibility(document.documentElement);
 
 
 
-  <style>
 
 
+
+
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    /* Base Styling */
     body {
-      font-family: Arial, sans-serif;
-      margin-top: 60px;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #161616;
+      background-color: #121212;
+      color: #fff;
+      line-height: 1.6;
     }
 
-    .faq-section {
-      max-width: 800px;
+    .contact-container {
+      max-width: 1200px;
       margin: 50px auto;
-      background-color: rgb(0, 0, 0);
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       padding: 20px;
     }
 
-    .faq-header {
-      font-size: 24px;
-      font-weight: bold;
-      color: #0451f7;
+    /* Header Section */
+    .contact-header {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
 
-    .faq {
-      margin: 10px 0;
-      border: 1px solid #0451f7;
-      border-radius: 5px;
-      overflow: hidden;
+    .contact-header h1 {
+      font-size: 48px;
+      color: #0451f7;
+      margin-bottom: 10px;
+      text-transform: uppercase;
     }
 
-    .faq-question {
-      background-color: #0451f7;
-      color: rgb(37, 34, 34);
-      padding: 15px;
-      cursor: pointer;
+    .contact-header p {
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    /* Contact Details Section */
+    .contact-details {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
-      align-items: center;
+      gap: 20px;
+      margin-bottom: 50px;
+    }
+
+    .detail-card {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      flex: 1 1 calc(50% - 20px);
+      text-align: center;
+    }
+
+    .detail-card i {
+      font-size: 40px;
+      color: #0451f7;
+      margin-bottom: 10px;
+    }
+
+    .detail-card h3 {
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .detail-card p {
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    .social-links a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 10px;
       font-size: 18px;
     }
 
-    .faq-answer {
-      display: none;
-      padding: 15px;
+    .social-links a:hover {
+      color: #ff7f50;
+    }
+
+    /* Operating Hours Section */
+    .hours-section {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .hours-section h3 {
+      font-size: 24px;
+      color: #0451f7;
+      margin-bottom: 10px;
+    }
+
+    .hours-section p {
       font-size: 16px;
-      background-color: #f0f8ff;
-      color: #333;
+      color: #ccc;
     }
 
-    .faq .faq-icon {
-      font-size: 20px;
-      transition: transform 0.3s ease;
+    /* Contact Form Section */
+    .contact-form {
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      margin: 0 auto;
     }
 
-    .faq.open .faq-icon {
-      transform: rotate(45deg);
+    .contact-form h2 {
+      font-size: 28px;
+      color: #0451f7;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
-    .faq.open .faq-answer {
+    .contact-form label {
       display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #ddd;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: none;
+      background-color: #2e2e2e;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .contact-form button {
+      background-color: #0451f7;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #ff7f50;
+      transform: scale(1.05);
+    }
+
+    .success-message, .error-message {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .success-message {
+      color: green;
+    }
+
+    .error-message {
+      color: red;
+    }
+
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+      .detail-card {
+        flex: 1 1 100%;
+      }
     }
   </style>
-
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
 <body>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-  <div class="faq-section">
-    <div class="faq-header">Frequently Asked Questions</div>
 
-    <div class="faq">
-      <div class="faq-question">
-        <span>What services do you offer to car detailers?</span>
-        <span class="faq-icon">+</span>
+  <div class="contact-container">
+    <!-- Header Section -->
+    <div class="contact-header">
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you! Whether you’re ready to start a project or just want to learn more about what we do, reach out to us.</p>
+    </div>
+
+    <!-- Contact Details -->
+    <div class="contact-details">
+      <div class="detail-card">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Address</h3>
+        <p>Your Office Address</p>
       </div>
-      <div class="faq-answer">
-        We provide a full suite of digital marketing services, including social media management, ad campaigns, SEO, and branding tailored specifically for car detailing businesses.
+      <div class="detail-card">
+        <i class="fas fa-phone-alt"></i>
+        <h3>Phone</h3>
+        <p>Your Contact Number</p>
+      </div>
+      <div class="detail-card">
+        <i class="fas fa-envelope"></i>
+        <h3>Email</h3>
+        <p>Your Email Address</p>
+      </div>
+      <div class="detail-card">
+        <i class="fas fa-share-alt"></i>
+        <h3>Social Media</h3>
+        <p class="social-links">
+          <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </p>
       </div>
     </div>
 
-    <div class="faq">
-      <div class="faq-question">
-        <span>How do you help car detailers get more customers?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-answer">
-        We create targeted advertising campaigns and optimize your online presence to attract local customers looking for car detailing services.
-      </div>
+    <!-- Operating Hours -->
+    <div class="hours-section">
+      <h3>Operating Hours</h3>
+      <p>Monday to Saturday: 10 AM - 6 PM</p>
+      <p>Sunday: Closed</p>
     </div>
 
-    <div class="faq">
-      <div class="faq-question">
-        <span>Can I track the results of your marketing efforts?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-answer">
-        Yes, we provide detailed analytics and reports, showing how your campaigns are performing and helping you make informed decisions.
-      </div>
-    </div>
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h2>Get in Touch</h2>
+      <form action="https://formsubmit.co/22e9aeaeef6301722534548289224e1c" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-    <div class="faq">
-      <div class="faq-question">
-        <span>Do you offer customized plans?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-answer">
-        Absolutely! We tailor our services to meet the unique needs of each car detailer we work with, ensuring maximum impact.
-      </div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+      <div class="success-message" id="successMessage">Thank you! Your message has been sent.</div>
+      <div class="error-message" id="errorMessage">Oops! Something went wrong. Please try again.</div>
     </div>
   </div>
 
-  <script>
-    document.querySelectorAll('.faq-question').forEach(question => {
-      question.addEventListener('click', () => {
-        const faq = question.parentElement;
-        faq.classList.toggle('open');
-      });
-    });
-  </script>
 </body>
 
 
@@ -6165,44 +6333,8 @@ flexibility(document.documentElement);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-        <footer data-elementor-type="footer" data-elementor-id="119"
+<!-- footer -->
+  <footer data-elementor-type="footer" data-elementor-id="119"
         class="elementor elementor-119 elementor-location-footer" data-elementor-post-type="elementor_library">
         <div class="elementor-element elementor-element-3f35cea e-flex e-con-boxed e-con e-parent" data-id="3f35cea"
             data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -7244,3 +7376,30 @@ flexibility(document.documentElement);
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
