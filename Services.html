@@ -5425,7 +5425,7 @@ flexibility(document.documentElement);
                                         </li> -->
                                         <li class="e-n-menu-item">
                                             <div id="e-n-menu-title-1154" class="e-n-menu-title">
-                                                 <a class="e-n-menu-title-container e-focus e-link"
+                                                <a class="e-n-menu-title-container e-focus e-link"
                                                     href="/Services.html"> <span
                                                         class="e-n-menu-title-text">
                                                         Services</span>
@@ -5486,7 +5486,7 @@ flexibility(document.documentElement);
                                         <a href="" aria-current="page"
                                             class="elementor-item elementor-item-active menu-link">Home</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-121">
-                                       <a href="/About.html"
+                                        <a href="/About.html"
                                             class="elementor-item menu-link">About</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2164">
                                         <a href="/Services.html"
@@ -5688,7 +5688,7 @@ flexibility(document.documentElement);
                                                             <path
                                                                 d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
                                                         </svg></span>Checkout</a></li>
-                                        </ul>
+                                        </ul>id
                                     </li> -->
                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-132"></li>
                                         <a href="/FAQ's.html"
@@ -5723,7 +5723,7 @@ flexibility(document.documentElement);
                                             class="elementor-item elementor-item-active menu-link"
                                             tabindex="-1">Home</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-121">
-                                         <a href="/About.html" class="elementor-item menu-link"
+                                        <a href="/About.html" class="elementor-item menu-link"
                                             tabindex="-1">About</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2164">
                                         <a href="" class="elementor-item menu-link"
@@ -5980,132 +5980,309 @@ flexibility(document.documentElement);
 
 
 
-  <style>
 
 
+
+
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    /* Base Styling */
     body {
-      font-family: Arial, sans-serif;
-      margin-top: 60px;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #161616;
+      background-color: #121212;
+      color: #fff;
     }
 
-    .faq-section {
-      max-width: 800px;
+    .services-container {
+      max-width: 1200px;
       margin: 50px auto;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       padding: 20px;
     }
 
-    .faq-header {
-      font-size: 24px;
-      font-weight: bold;
-      color: #0451f7;
+    /* Header Styling */
+    .services-header {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 50px;
     }
 
-    .faq {
-      margin: 10px 0;
-      border: 1px solid #0451f7;
-      border-radius: 5px;
+    .services-header h1 {
+      font-size: 50px;
+      color: #0451f7;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .services-header p {
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    /* Service Card Styling */
+    .service-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: rgb(33, 33, 33);
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 40px;
+      cursor: pointer;
+      position: relative;
       overflow: hidden;
     }
 
-    .faq-question {
-      background-color: #0451f7;
-      color: rgb(37, 34, 34);
-      padding: 15px;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 18px;
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
     }
 
-    .faq-answer {
-      display: none;
-      padding: 15px;
+    .service-card .icon {
+      font-size: 50px;
+      color: #0451f7;
+      margin-bottom: 20px;
+    }
+
+    .service-card h2 {
+      font-size: 32px;
+      color: #0451f7;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .service-card p {
       font-size: 16px;
-      background-color: #f0f8ff;
-      color: #333;
+      color: #ccc;
+      line-height: 1.8;
+      text-align: center;
     }
 
-    .faq .faq-icon {
-      font-size: 20px;
-      transition: transform 0.3s ease;
+    .highlight {
+      color: #ff7f50;
+      font-weight: bold;
     }
 
-    .faq.open .faq-icon {
-      transform: rotate(45deg);
+    .divider {
+      height: 2px;
+      background-color: #444;
+      margin: 50px 0;
     }
 
-    .faq.open .faq-answer {
-      display: block;
+    /* Hover Effects for Icons */
+    .service-card .icon:hover {
+      transform: scale(1.2);
+      transition: 0.3s ease;
+    }
+
+    /* Responsive Styling */
+    @media (max-width: 1024px) {
+      .services-header h1 {
+        font-size: 40px;
+      }
+
+      .service-card {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .services-header h1 {
+        font-size: 32px;
+      }
+
+      .service-card {
+        padding: 15px;
+      }
+
+      .service-card h2 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .services-header h1 {
+        font-size: 24px;
+      }
+
+      .service-card {
+        padding: 10px;
+      }
+
+      .service-card h2 {
+        font-size: 22px;
+      }
     }
   </style>
-
+</head>
 <body>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-  <div class="faq-section">
-    <div class="faq-header">Frequently Asked Questions</div>
 
-    <div class="faq">
-      <div class="faq-question">
-        <span>What services do you offer to car detailers?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-answer">
-        We provide a full suite of digital marketing services, including social media management, ad campaigns, SEO, and branding tailored specifically for car detailing businesses.
-      </div>
+  <div class="services-container">
+    <!-- Header -->
+    <div class="services-header">
+      <h1>Our Services</h1>
+      <p>Explore the range of services we offer to help your business thrive</p>
     </div>
 
-    <div class="faq">
-      <div class="faq-question">
-        <span>How do you help car detailers get more customers?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-answer">
-        We create targeted advertising campaigns and optimize your online presence to attract local customers looking for car detailing services.
-      </div>
+    <!-- Google Ads Campaign Section -->
+    <div class="service-card">
+      <div class="icon">📈</div>
+      <h2>Google Ads Campaign</h2>
+      <p>
+        <strong>Setup:</strong> Create and configure Google Ads accounts, campaigns, ad groups, and ads tailored to your business objectives.
+      </p>
+      <p>
+        <strong>Management:</strong> Continuously monitor and adjust your ads for optimal performance, including keyword management, bid adjustments, and ad copy testing.
+      </p>
+      <p>
+        <strong>Reporting:</strong> Provide detailed reports on ad performance, including clickthrough rates (CTR), conversion rates, and return on ad spend (ROAS).
+      </p>
     </div>
 
-    <div class="faq">
-      <div class="faq-question">
-        <span>Can I track the results of your marketing efforts?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-answer">
-        Yes, we provide detailed analytics and reports, showing how your campaigns are performing and helping you make informed decisions.
-      </div>
+    <div class="divider"></div>
+
+    <!-- Meta Ads Campaign Section -->
+    <div class="service-card">
+      <div class="icon">📱</div>
+      <h2>Meta Ads Campaign</h2>
+      <p>
+        <strong>Design:</strong> Create visually appealing and engaging ad creatives for Facebook and Instagram, including images, videos, and carousel ads.
+      </p>
+      <p>
+        <strong>Execution:</strong> Implement ad campaigns using advanced targeting options to reach specific demographics, interests, and behaviors.
+      </p>
+      <p>
+        <strong>Optimization:</strong> Regularly analyze and optimize ad performance by adjusting targeting, bidding strategies, and creatives to maximize ROI.
+      </p>
     </div>
 
-    <div class="faq">
-      <div class="faq-question">
-        <span>Do you offer customized plans?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-answer">
-        Absolutely! We tailor our services to meet the unique needs of each car detailer we work with, ensuring maximum impact.
-      </div>
+    <div class="divider"></div>
+
+    <!-- Content Strategy Section -->
+    <div class="service-card">
+      <div class="icon">📝</div>
+      <h2>Content Strategy</h2>
+      <p>
+        <strong>Development:</strong> Create a comprehensive content strategy that aligns with your business goals, target audience, and brand voice.
+      </p>
+      <p>
+        <strong>Planning:</strong> Outline a content calendar with planned topics, formats, and publishing schedules to ensure consistency and relevance.
+      </p>
+      <p>
+        <strong>Analysis:</strong> Measure the effectiveness of your content strategy through analytics and adjust based on performance data and audience feedback.
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Content Production Section -->
+    <div class="service-card">
+      <div class="icon">🎥</div>
+      <h2>Content Production</h2>
+      <p>
+        <strong>Creation:</strong> Produce high-quality content such as blog posts, articles, videos, infographics, and social media posts that engage and inform your audience.
+      </p>
+      <p>
+        <strong>Alignment:</strong> Ensure all content aligns with your brand’s messaging, tone, and marketing objectives to maintain a cohesive brand identity.
+      </p>
+      <p>
+        <strong>Distribution:</strong> Publish and distribute content across various channels to maximize reach and engagement.
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Social Media Management Section -->
+    <div class="service-card">
+      <div class="icon">💬</div>
+      <h2>Social Media Management</h2>
+      <p>
+        <strong>Profile Management:</strong> Oversee and maintain your social media profiles on platforms like Facebook, Instagram, Twitter, and LinkedIn.
+      </p>
+      <p>
+        <strong>Content Scheduling:</strong> Plan and schedule posts to maintain a consistent online presence, ensuring content is posted at optimal times for maximum engagement.
+      </p>
+      <p>
+        <strong>Engagement:</strong> Interact with followers by responding to comments, messages, and mentions to build a strong online community.
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- WhatsApp API + Campaign Section -->
+    <div class="service-card">
+      <div class="icon">📱</div>
+      <h2>WhatsApp API + Campaign</h2>
+      <p>
+        <strong>Integration:</strong> Implement WhatsApp API for streamlined customer communication, enabling automated messages, notifications, and customer support.
+      </p>
+      <p>
+        <strong>Campaign Design:</strong> Develop and execute targeted WhatsApp campaigns to promote products, services, and special offers.
+      </p>
+      <p>
+        <strong>Engagement:</strong> Use interactive messaging to engage customers, answer queries, and drive conversions through personalized communication.
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- WhatsApp Chatbot Section -->
+    <div class="service-card">
+      <div class="icon">🤖</div>
+      <h2>WhatsApp Chatbot</h2>
+      <p>
+        <strong>Development and Integration:</strong> Create a customized WhatsApp chatbot tailored to your business needs, capable of automating responses and interactions.
+      </p>
+      <p>
+        <strong>Customer Engagement:</strong> Provide 24/7 support and enhance customer interaction by automating responses to common queries and providing instant information.
+      </p>
+      <p>
+        <strong>Lead Generation:</strong> Capture leads through interactive conversations and guide them toward conversion points.
+      </p>
+      <p>
+        <strong>Analytics and Reporting:</strong> Monitor chatbot interactions and provide insights to optimize performance and improve user experience.
+      </p>
     </div>
   </div>
-
-  <script>
-    document.querySelectorAll('.faq-question').forEach(question => {
-      question.addEventListener('click', () => {
-        const faq = question.parentElement;
-        faq.classList.toggle('open');
-      });
-    });
-  </script>
 </body>
 
 
@@ -6189,7 +6366,6 @@ flexibility(document.documentElement);
 
 
 
-        
 
 
 
@@ -6202,7 +6378,15 @@ flexibility(document.documentElement);
 
 
 
-        <footer data-elementor-type="footer" data-elementor-id="119"
+
+
+
+
+
+
+
+<!-- footer -->
+  <footer data-elementor-type="footer" data-elementor-id="119"
         class="elementor elementor-119 elementor-location-footer" data-elementor-post-type="elementor_library">
         <div class="elementor-element elementor-element-3f35cea e-flex e-con-boxed e-con e-parent" data-id="3f35cea"
             data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -7244,3 +7428,15 @@ flexibility(document.documentElement);
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

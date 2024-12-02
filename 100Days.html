@@ -5425,7 +5425,7 @@ flexibility(document.documentElement);
                                         </li> -->
                                         <li class="e-n-menu-item">
                                             <div id="e-n-menu-title-1154" class="e-n-menu-title">
-                                                 <a class="e-n-menu-title-container e-focus e-link"
+                                                <a class="e-n-menu-title-container e-focus e-link"
                                                     href="/Services.html"> <span
                                                         class="e-n-menu-title-text">
                                                         Services</span>
@@ -5486,7 +5486,7 @@ flexibility(document.documentElement);
                                         <a href="" aria-current="page"
                                             class="elementor-item elementor-item-active menu-link">Home</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-121">
-                                       <a href="/About.html"
+                                        <a href="/About.html"
                                             class="elementor-item menu-link">About</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2164">
                                         <a href="/Services.html"
@@ -5688,7 +5688,7 @@ flexibility(document.documentElement);
                                                             <path
                                                                 d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
                                                         </svg></span>Checkout</a></li>
-                                        </ul>
+                                        </ul>id
                                     </li> -->
                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-132"></li>
                                         <a href="/FAQ's.html"
@@ -5723,7 +5723,7 @@ flexibility(document.documentElement);
                                             class="elementor-item elementor-item-active menu-link"
                                             tabindex="-1">Home</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-121">
-                                         <a href="/About.html" class="elementor-item menu-link"
+                                        <a href="/About.html" class="elementor-item menu-link"
                                             tabindex="-1">About</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2164">
                                         <a href="" class="elementor-item menu-link"
@@ -5980,132 +5980,424 @@ flexibility(document.documentElement);
 
 
 
-  <style>
 
 
+
+
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    /* Base Styling */
     body {
-      font-family: Arial, sans-serif;
-      margin-top: 60px;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #161616;
+      background-color: #121212;
+      color: #fff;
     }
 
-    .faq-section {
-      max-width: 800px;
+    .challenge-container {
+      max-width: 1200px;
       margin: 50px auto;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       padding: 20px;
     }
 
-    .faq-header {
+    /* Header Styling */
+    .challenge-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .challenge-header h1 {
+      font-size: 50px;
+      color: #0451f7;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .challenge-header p {
+      font-size: 18px;
+      color: #ddd;
+    }
+
+    /* Challenge Section */
+    .challenge-section {
+      background-color: #1a1a1a;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      margin-bottom: 50px;
+    }
+
+    .challenge-section h2 {
+      font-size: 32px;
+      color: #0451f7;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .challenge-section p {
+      font-size: 16px;
+      color: #ccc;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .highlight {
+      color: #ff7f50;
+      font-weight: bold;
+    }
+
+    /* 3 Key Benefits Grid */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .benefit-card {
+      background: #333;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .benefit-card h3 {
+      font-size: 24px;
+      color: #0451f7;
+      margin-bottom: 10px;
+    }
+
+    .benefit-card p {
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    /* Price Offer Tag */
+    .price-tag {
+      background-color: #ff7f50;
+      padding: 20px;
+      border-radius: 10px;
+      color: #fff;
       font-size: 24px;
       font-weight: bold;
-      color: #0451f7;
+      display: inline-block;
+      margin-top: 30px;
       text-align: center;
-      margin-bottom: 20px;
+      width: 100%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
 
-    .faq {
+    .price-tag .price {
+      font-size: 36px;
       margin: 10px 0;
-      border: 1px solid #0451f7;
-      border-radius: 5px;
-      overflow: hidden;
     }
 
-    .faq-question {
-      background-color: #0451f7;
-      color: rgb(37, 34, 34);
-      padding: 15px;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 18px;
-    }
-
-    .faq-answer {
-      display: none;
-      padding: 15px;
+    .price-tag .small-text {
       font-size: 16px;
-      background-color: #f0f8ff;
-      color: #333;
+      color: #ccc;
     }
 
-    .faq .faq-icon {
-      font-size: 20px;
-      transition: transform 0.3s ease;
+    .price-tag .highlight {
+      font-size: 24px;
+      color: #fff;
     }
 
-    .faq.open .faq-icon {
-      transform: rotate(45deg);
+    /* Eligibility and Steps Section */
+    .eligibility-steps {
+      background-color: #1a1a1a;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      margin-top: 50px;
     }
 
-    .faq.open .faq-answer {
+    .eligibility-steps h2 {
+      font-size: 32px;
+      color: #0451f7;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .steps-list {
+      margin-top: 30px;
+    }
+
+    .steps-list ol {
+      font-size: 16px;
+      color: #ccc;
+      line-height: 1.8;
+    }
+
+    .steps-list li {
+      margin-bottom: 10px;
+    }
+
+    /* Call to Action Button */
+    .cta-button {
       display: block;
+      background-color: #0451f7;
+      color: #fff;
+      padding: 15px 30px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 10px;
+      margin-top: 30px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #ff7f50;
+    }
+
+    /* Responsive Styling */
+    @media (max-width: 1024px) {
+      .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .challenge-header h1 {
+        font-size: 40px;
+      }
+
+      .challenge-section h2 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .challenge-header h1 {
+        font-size: 32px;
+      }
+
+      .challenge-section h2 {
+        font-size: 24px;
+      }
+
+      .cta-button {
+        padding: 12px 25px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .cta-button {
+        padding: 10px 20px;
+      }
     }
   </style>
-
+</head>
 <body>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-  <div class="faq-section">
-    <div class="faq-header">Frequently Asked Questions</div>
 
-    <div class="faq">
-      <div class="faq-question">
-        <span>What services do you offer to car detailers?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-answer">
-        We provide a full suite of digital marketing services, including social media management, ad campaigns, SEO, and branding tailored specifically for car detailing businesses.
+  <div class="challenge-container">
+    <!-- Header -->
+    <div class="challenge-header">
+      <h1>#100 Day's Challenge</h1>
+      <p>Join our exclusive 100-day plan designed to boost your business and take it to the next level</p>
+    </div>
+
+    <!-- Why This Challenge Is Important Section -->
+    <div class="challenge-section">
+      <h2>Why is this Challenge Important?</h2>
+      <p>
+        The <span class="highlight">festival season</span> in India is a time of high consumer activity. People are more willing to spend on car maintenance and even purchase new vehicles, making it the perfect opportunity to scale your business.
+      </p>
+      <p>
+        This 100-day challenge ensures:
+      </p>
+
+      <div class="benefits-grid">
+        <!-- Benefit 1 -->
+        <div class="benefit-card">
+          <h3>Increased Local Visibility</h3>
+          <p>More customers will find you through optimized GMB and social media efforts.</p>
+        </div>
+        <!-- Benefit 2 -->
+        <div class="benefit-card">
+          <h3>High-Quality Leads</h3>
+          <p>Attract highly interested and high-converting leads to your business.</p>
+        </div>
+        <!-- Benefit 3 -->
+        <div class="benefit-card">
+          <h3>Sustained Growth</h3>
+          <p>By retaining new customers through loyalty programs, you create a steady flow of business beyond the festive season.</p>
+        </div>
       </div>
     </div>
 
-    <div class="faq">
-      <div class="faq-question">
-        <span>How do you help car detailers get more customers?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-answer">
-        We create targeted advertising campaigns and optimize your online presence to attract local customers looking for car detailing services.
-      </div>
+    <div class="divider"></div>
+
+    <!-- Biggest Problems & Solutions Section -->
+    <div class="challenge-section">
+      <h2>Biggest Problems for Car Detailers in India</h2>
+      <p><strong>1. Market Awareness and Education:</strong> Many car owners are unaware of professional detailing services.</p>
+      <p><strong>2. Skilled Labor Shortage:</strong> A shortage of trained workers leads to inconsistent service quality.</p>
+      <p><strong>3. Competition from the Informal Sector:</strong> Informal detailing services often undercut professional services with lower prices.</p>
     </div>
 
-    <div class="faq">
-      <div class="faq-question">
-        <span>Can I track the results of your marketing efforts?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-answer">
-        Yes, we provide detailed analytics and reports, showing how your campaigns are performing and helping you make informed decisions.
-      </div>
+    <div class="divider"></div>
+
+    <!-- Case Study Section -->
+    <div class="challenge-section">
+      <h2>Case Studies: Success Stories</h2>
+      <p>Learn from top players in the industry:</p>
+      <p><strong>Detailing Mafia:</strong> A comprehensive marketing approach with franchising, high-quality products, customer loyalty programs, and professional training.</p>
+      <p><strong>Detailing Devils:</strong> Strong digital presence with SEO, social media, content marketing, and customer engagement strategies.</p>
     </div>
 
-    <div class="faq">
-      <div class="faq-question">
-        <span>Do you offer customized plans?</span>
-        <span class="faq-icon">+</span>
+    <div class="divider"></div>
+
+    <!-- Price Offer Section -->
+    <div class="price-tag">
+      <p class="price">₹32,000 - ₹49,999/Month</p>
+      <p class="small-text">Cost of Wash per Day: ₹499</p>
+      <p class="highlight">50% - 100% Growth in Revenue After 100 Days</p>
+      <p class="small-text">Excluding Ad Budget Per Month*</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Eligibility & Steps Section -->
+    <div class="eligibility-steps">
+      <h2>How to Start</h2>
+      <div class="steps-list">
+        <ol>
+          <li><strong>Eligibility:</strong> This plan is designed for businesses generating revenue below INR 3 Lakhs per month or less than 6 months in operation.</li>
+          <li><strong>Initial Consultation:</strong> Schedule a free consultation to discuss your business needs and goals.</li>
+          <li><strong>Marketing Strategy Report:</strong> We create a tailored 100-day action plan specific to your business.</li>
+          <li><strong>Agreement and Onboarding:</strong> Sign the agreement to officially start the collaboration.</li>
+        </ol>
       </div>
-      <div class="faq-answer">
-        Absolutely! We tailor our services to meet the unique needs of each car detailer we work with, ensuring maximum impact.
-      </div>
+
+      <a href="#contact" class="cta-button">Get Started Now</a>
     </div>
   </div>
 
-  <script>
-    document.querySelectorAll('.faq-question').forEach(question => {
-      question.addEventListener('click', () => {
-        const faq = question.parentElement;
-        faq.classList.toggle('open');
-      });
-    });
-  </script>
 </body>
 
 
@@ -6174,35 +6466,8 @@ flexibility(document.documentElement);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-        <footer data-elementor-type="footer" data-elementor-id="119"
+<!-- footer -->
+  <footer data-elementor-type="footer" data-elementor-id="119"
         class="elementor elementor-119 elementor-location-footer" data-elementor-post-type="elementor_library">
         <div class="elementor-element elementor-element-3f35cea e-flex e-con-boxed e-con e-parent" data-id="3f35cea"
             data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -7244,3 +7509,30 @@ flexibility(document.documentElement);
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

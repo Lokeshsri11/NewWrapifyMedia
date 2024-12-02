@@ -5425,8 +5425,8 @@ flexibility(document.documentElement);
                                         </li> -->
                                         <li class="e-n-menu-item">
                                             <div id="e-n-menu-title-1154" class="e-n-menu-title">
-                                                <a class="e-n-menu-title-container e-focus e-link"
-                                                    href=""> <span
+                                                 <a class="e-n-menu-title-container e-focus e-link"
+                                                    href="/Services.html"> <span
                                                         class="e-n-menu-title-text">
                                                         Services</span>
                                                 </a>
@@ -5486,10 +5486,10 @@ flexibility(document.documentElement);
                                         <a href="" aria-current="page"
                                             class="elementor-item elementor-item-active menu-link">Home</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-121">
-                                        <a href=""
+                                        <a href="/About.html"
                                             class="elementor-item menu-link">About</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2164">
-                                        <a href=""
+                                        <a href="/Services.html"
                                             class="elementor-item menu-link">Services</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2163">
                                         <a href=""
@@ -5688,7 +5688,7 @@ flexibility(document.documentElement);
                                                             <path
                                                                 d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z" />
                                                         </svg></span>Checkout</a></li>
-                                        </ul>
+                                        </ul>id
                                     </li> -->
                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-132"></li>
                                         <a href="/FAQ's.html"
@@ -5723,7 +5723,7 @@ flexibility(document.documentElement);
                                             class="elementor-item elementor-item-active menu-link"
                                             tabindex="-1">Home</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-121">
-                                        <a href="" class="elementor-item menu-link"
+                                        <a href="/About.html" class="elementor-item menu-link"
                                             tabindex="-1">About</a></li>
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2164">
                                         <a href="" class="elementor-item menu-link"
@@ -5984,11 +5984,323 @@ flexibility(document.documentElement);
 
 
 
+<br>
+<br>
+<br>
 
+<style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin-top: 60px;
+      margin: 0;
+      padding: 0;
+      background-color: #000000;
+      color: #333;
+    }
 
+    .about-container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+    }
 
+    /* Header Styling */
+    .about-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
 
+    .about-header h1 {
+      font-size: 48px;
+      color: #0451f7;
+      margin-bottom: 10px;
+    }
 
+    .about-header p {
+      font-size: 18px;
+      color: #fffdfd;
+    }
+
+    /* Section Styling */
+    .about-section {
+      margin-bottom: 50px;
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+    }
+
+    .about-section .icon {
+      font-size: 40px;
+      color: #0451f7;
+      flex-shrink: 0;
+    }
+
+    .about-section .content {
+      flex: 1;
+    }
+
+    .about-section .content h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #0451f7;
+    }
+
+    .about-section .content p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #e7e1e1;
+    }
+
+    /* Divider Lines */
+    .divider {
+      height: 1px;
+      background-color: #eee;
+      margin: 40px 0;
+    }
+
+    /* Founder Image Styling */
+    .founder-section {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .founder-section img {
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .founder-section img:hover {
+      transform: scale(1.05);
+    }
+
+    .founder-section .content p {
+      color: white;
+    }
+
+    .founder-section .content h2 {
+      color: #ffffff;
+    }
+
+    /* New Sections Styling */
+    .help-section, .services-section {
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 10px;
+      margin-bottom: 50px;
+    }
+
+    .help-section h2, .services-section h2 {
+      font-size: 32px;
+      color: #0451f7;
+      margin-bottom: 20px;
+    }
+
+    .help-section p, .services-section p {
+      font-size: 16px;
+      color: #e7e1e1;
+      line-height: 1.8;
+    }
+
+    .help-section ul li {
+      font-size: 16px;
+      color: #fff;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .services-section ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .services-section ul li {
+      font-size: 16px;
+      color: #fff;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .services-section ul li::before {
+      content: "✔️";
+      position: absolute;
+      left: 0;
+      color: #0451f7;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 1024px) {
+      .about-header h1 {
+        font-size: 36px;
+      }
+
+      .about-header p {
+        font-size: 16px;
+      }
+
+      .about-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .about-section .content {
+        text-align: center;
+      }
+
+      .founder-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .founder-section img {
+        max-width: 200px;
+        margin-bottom: 20px;
+      }
+
+      .help-section, .services-section {
+        padding: 20px;
+      }
+
+      .help-section h2, .services-section h2 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .about-header h1 {
+        font-size: 28px;
+      }
+
+      .about-header p {
+        font-size: 14px;
+      }
+
+      .about-section .content h2 {
+        font-size: 24px;
+      }
+
+      .about-section .content p {
+        font-size: 14px;
+      }
+
+      .about-section {
+        gap: 20px;
+      }
+
+      .founder-section img {
+        max-width: 180px;
+      }
+
+      .divider {
+        margin: 20px 0;
+      }
+
+      .help-section h2, .services-section h2 {
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .about-header h1 {
+        font-size: 24px;
+      }
+
+      .about-header p {
+        font-size: 12px;
+      }
+
+      .about-section .content h2 {
+        font-size: 20px;
+      }
+
+      .about-section .content p {
+        font-size: 12px;
+      }
+
+      .founder-section img {
+        max-width: 150px;
+        margin-bottom: 15px;
+      }
+
+      .about-section {
+        gap: 15px;
+      }
+
+      .help-section h2, .services-section h2 {
+        font-size: 20px;
+      }
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="about-container">
+    <!-- Header -->
+    <div class="about-header">
+      <h1>About Wrapify Media</h1>
+      <p>Redefining Omni Marketing since November 2023</p>
+    </div>
+
+    <!-- Founder Section -->
+    <div class="founder-section">
+      <img src="/img/logo.png" alt="Founder">
+      <div class="content">
+        <h2>Founder</h2>
+        <p>
+            Transforming the car detailing industry, one brand at a time. At Wrapify Media, we specialize in
+crafting tailored social media marketing strategies that drive growth and engagement. From the
+USA to India, Canada, and Dubai, our expert team delivers results that speak for themselves.
+Join us on our journey to redefine success in car detailing marketing.
+          <!-- Wrapify Media was founded in November 2023 by <span class="highlight">Ayushh Tyagi</span>. Starting with a team of 5, the company has grown into a team of 25 professionals. Initially targeting the USA market, Wrapify Media has expanded to <span class="highlight">India</span> and <span class="highlight">Dubai</span>, collaborating with 10 top-tier brands. -->
+        </p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Legal & Compliance Section -->
+    <div class="about-section">
+      <div class="icon">⚖️</div>
+      <div class="content">
+        <h2>Legal & Compliance</h2>
+        <p>
+          Wrapify Media is <span class="highlight">MSME registered</span>, ensuring adherence to quality and compliance standards. The founder, Ayushh Tyagi, also leads <span class="highlight">Blue Melon Media</span>, leveraging over seven years of experience in the advertising, radio, and production industries.
+        </p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- How Wrapify Media Can Help Section -->
+    <div class="help-section">
+      <h2>How Wrapify Media Can Help You</h2>
+      <p>We offer comprehensive services designed to drive measurable growth for your business.</p>
+      <ul>
+        <li><strong>Omni-Channel Marketing Strategy:</strong> We create integrated marketing strategies across digital, social media, and traditional advertising.</li>
+        <li><strong>Expert Brand Building:</strong> Leverage our experience in digital marketing, advertising, and production to build compelling brand identities.</li>
+        <li><strong>Tailored Campaigns:</strong> Our data-driven campaigns align with your business objectives, driving results like brand awareness and lead generation.</li>
+        <li><strong>Innovative Solutions:</strong> We use the latest AI technologies and tools to optimize your marketing efforts for maximum efficiency.</li>
+        <li><strong>Dedicated Support:</strong> Our ongoing support ensures your campaigns continue to perform and achieve growth.</li>
+      </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Our Services Section -->
+    <div class="services-section">
+      <h2>Our Services</h2>
+      <p>We specialize in various services to enhance your business growth:</p>
+      <ul>
+        <li><strong>GMB Profile Optimization & Ranking:</strong> Enhance your Google My Business profile to improve local SEO rankings and visibility.</li>
+        <li><strong>SEO & Content Marketing:</strong> Implement SEO strategies to increase website traffic and brand recognition.</li>
+        <li><strong>Google Ads Campaign Management:</strong> Manage and optimize your Google Ads campaigns for high ROI.</li>
+      </ul>
+    </div>
+  </div>
+</body>
 
 
 
@@ -7050,3 +7362,15 @@ flexibility(document.documentElement);
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
