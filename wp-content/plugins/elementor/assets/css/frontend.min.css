@@ -1711,7 +1711,8 @@ body.rtl .e-con {
     flex-basis: auto;
     flex-grow: 1;
     flex-shrink: 1;
-    align-self: auto
+    align-self: auto;
+    /* background-color: #222222; */
 }
 
 .e-con.e-grid>.e-con-inner {

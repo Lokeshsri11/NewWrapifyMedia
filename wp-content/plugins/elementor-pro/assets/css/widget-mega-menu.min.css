@@ -285,7 +285,7 @@
 }
 
 .elementor-widget-n-menu .e-n-menu-title:not(.e-current):not(:hover) .e-n-menu-title-container .e-n-menu-title-text {
-    color: var(--n-menu-title-color-normal)
+    color: black;
 }
 
 .elementor-widget-n-menu .e-n-menu-title:not(.e-current):not(:hover) .e-n-menu-icon i {

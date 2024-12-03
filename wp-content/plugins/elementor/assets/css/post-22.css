@@ -85,8 +85,37 @@
 }
 
 .elementor-22 .elementor-element.elementor-element-32e769e .elementor-heading-title {
-    font-size: 12px;
+    width: 100%; /* Full-width container */
+  max-width: 800px; /* Limit the maximum width */
+  font-size: 23px; /* Adjust the font size */
+  color: #000; /* Text color */
+  white-space: nowrap; /* Keep text on one line */
+   /* Hide excess text */
+  text-overflow: ellipsis; /* Add "..." for overflow */
+   display: flex; /* Enables Flexbox */
+  justify-content: center; /* Horizontal alignment */
+  /* Vertical alignment */
+  height: 100px; /* Set container height */
+ 
 }
+/* Responsive Adjustments */
+@media (max-width: 768px) { /* Tablets */
+    .elementor-22 .elementor-element.elementor-element-32e769e .elementor-heading-title {
+      font-size: 16px; /* Smaller font size for tablets */
+      height: 150px; /* Adjust height */
+      max-width: 90%; /* Use a percentage for fluid width */
+    }
+  }
+  
+  @media (max-width: 480px) { /* Mobile */
+    .elementor-22 .elementor-element.elementor-element-32e769e .elementor-heading-title {
+      font-size: 14px; /* Smaller font size for mobile */
+      height: auto; /* Remove fixed height for smaller screens */
+      white-space: normal; /* Allow text wrapping on small devices */
+    }
+  }
+  
+
 
 .elementor-22 .elementor-element.elementor-element-8f7b815 {
     --e-rating-justify-content: center;
@@ -549,6 +578,8 @@ body.rtl .elementor-22 .elementor-element.elementor-element-e37338d {
 }
 
 .elementor-22 .elementor-element.elementor-element-5fd6d52 .elementor-heading-title {
+    font-family: 'Babas Neue', 'sans-serif';
+    font-size: 54px;
     color: #FFFFFF;
 }
 
@@ -4207,6 +4238,7 @@ body.rtl .elementor-22 .elementor-element.elementor-element-39a8405 {
 /* End custom CSS */
 /* Start custom CSS for container, class: .elementor-element-4341644 */
 .elementor-22 .elementor-element.elementor-element-4341644, .elementor-22 .elementor-element.elementor-element-4341644 .elementor-heading-title {
+    font-family: "Mulish", sans-serif;
     text-align: center;
     color: #fff;
 }
