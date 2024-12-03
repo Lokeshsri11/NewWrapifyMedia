@@ -6042,7 +6042,8 @@ flexibility(document.documentElement);
                             data-animation-delay="300">
                          <div class="custom-widget-container">
                            <h1 class="custom-heading">
-                             Helping you generate<span class="custom-highlight"> more leads</span>, expand your <span class="custom-highlight">reach</span> &amp; grow your business
+                             Helping you generate<span class="custom-highlight"> more leads</span>, <br>
+                              expand your <span class="custom-highlight">reach</span> &amp; grow your <span>business</span>
                            </h1>
                          </div>
                        </div>
@@ -7002,12 +7003,34 @@ flexibility(document.documentElement);
 
 
 <style>
-   /* Container for the "Our Clients" section */
+ /* Container for the "Our Clients" section */
 .our-clients-containers {
     text-align: center; /* Center-align the title */
     padding: 50px 20px; /* Add some padding around the section */
-    background-color: #0e0d0d; /* Light background for the section */
+    background: linear-gradient(135deg, #103c80, #0451f7); /* Gradient background */
     overflow: hidden; /* Hide any overflow content */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+    position: relative; /* Enable positioning for additional effects */
+}
+
+ 
+/* Optional: Add an overlay effect */
+.our-clients-containers::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+/* Ensure content stays above the overlay */
+.our-clients-containers > * {
+    position: relative;
+    z-index: 2;
 }
 
 /* Styling for the Title */
@@ -9847,7 +9870,7 @@ flexibility(document.documentElement);
                                 data-id="426fe6a" data-element_type="widget" data-widget_type="text-editor.default">
                                 <div class="elementor-widget-container">
                                   <p>50%-100% Growth in Revenue After 100 Days</p>
-                                  <p>Just Rs 499-/ Per Day</p>
+                                  <p>Just Rs 549-/ Per Day</p>
                                     <p><span style="text-decoration: underline;"><span style="color: #000000;"><a
                                                     style="color: #000000; text-decoration: underline;"
                                                     href="/100Days.html" target="_blank"
