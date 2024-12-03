@@ -285,7 +285,7 @@
 }
 
 .elementor-widget-n-menu .e-n-menu-title:not(.e-current):not(:hover) .e-n-menu-title-container .e-n-menu-title-text {
-    color: black;
+    color: rgb(247, 247, 247);
 }
 
 .elementor-widget-n-menu .e-n-menu-title:not(.e-current):not(:hover) .e-n-menu-icon i {
@@ -316,7 +316,7 @@
 
 .elementor-widget-n-menu .e-n-menu-title.e-current,
 .elementor-widget-n-menu .e-n-menu-title.e-current a {
-    color: #0451f7;
+    color: #ffffff;
 }
 
 .elementor-widget-n-menu .e-n-menu-title.e-current .icon-inactive {
