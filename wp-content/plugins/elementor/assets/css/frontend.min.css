@@ -1715,6 +1715,20 @@ body.rtl .e-con {
     /* background-color: #222222; */
 }
 
+.e-con.e-flexs>.e-con-inners {
+    flex-wrap: var(--flex-wrap);
+    justify-content: var(--justify-content);
+    align-items: var(--align-items);
+    align-content: var(--align-content);
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-self: auto;
+    /* background-color: #222222; */
+}
+
+
+
 .e-con.e-grid>.e-con-inner {
     justify-items: var(--justify-items);
     align-items: var(--align-items)
