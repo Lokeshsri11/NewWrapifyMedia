@@ -6245,17 +6245,50 @@ flexibility(document.documentElement);
                                                 <a class="elementor-button-link elementor-button elementor-size-sm elementor-button-link elementor-animation-grow"
                                                     href="" target="_blank"
                                                     rel="noopener">
-                                                    <span class="elementor-button-content-wrapper uael-buttons-icon-">
-                                                        <span class="elementor-align-icon- elementor-button-icon">
-                                                        </span>
-                                                        <span class="elementor-button-text elementor-inline-editing"
-                                                            data-elementor-setting-key="buttons.0.text"
-                                                            data-elementor-inline-editing-toolbar="none">Setup A Free
-                                                            Meeting</span>
-                                                    </span>
-                                                </a>
+                                                  
+                                                    <!-- <a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow"
+                                                    href="" target="_blank"
+                                                    rel="noopener"> -->
+                                                    <span class="elementor-button-content-wrapper" id="setupMeetingButton">
+                                                      <span class="elementor-button-text">Setup A Free Meeting</span>
+                                                  </span>
+                                                  
+                                                  </a>
+
+
+                                                  <div class="meetings-iframe-container" style="display: none;" style="size: 100px;" id="meetingScheduler"></div>
+
+                                                  <script>
+                                                      document.getElementById("setupMeetingButton").addEventListener("click", function (event) {
+                                                        // Prevent any default behavior like page refresh or link navigation
+                                                        event.preventDefault();
+                                                    
+                                                        // Get the meeting scheduler container
+                                                        const iframeContainer = document.getElementById("meetingScheduler");
+                                                    
+                                                        // Check if the iframe is already added
+                                                        if (!iframeContainer.querySelector("iframe")) {
+                                                          // Create the iframe element dynamically
+                                                          const iframe = document.createElement("iframe");
+                                                          iframe.src = "https://meetings.hubspot.com/wrapify?embed=true"; // Replace with your HubSpot URL
+                                                          iframe.width = "100%";
+                                                          iframe.height = "600px";
+                                                          iframe.style.border = "none";
+                                                          iframeContainer.appendChild(iframe);
+                                                        }
+                                                    
+                                                        // Make the iframe container visible
+                                                        iframeContainer.style.display = "block";
+                                                    
+                                                        // Scroll to the iframe (optional for a smoother user experience)
+                                                        iframeContainer.scrollIntoView({ behavior: "smooth" });
+                                                      });
+                                                    </script>
+                                                    
+                                                  
+                                                                                            
                                             </div>
-                                            <div
+                                            <!-- <div
                                                 class="uael-button-wrapper elementor-button-wrapper uael-dual-button elementor-repeater-item-b494599 uael-dual-button-1">
                                                 <a class="elementor-button-link elementor-button elementor-size-sm elementor-button-link elementor-animation-grow"
                                                     href="">
@@ -6269,7 +6302,7 @@ flexibility(document.documentElement);
                                                             Started</span>
                                                     </span>
                                                 </a>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -6555,7 +6588,7 @@ flexibility(document.documentElement);
   display: block; /* Ensure proper block display */
   position: relative; /* Enable positioning */
   margin: 0 auto; /* Center the video horizontally */
-  top: -50px; /* Shift the video upwards */
+  top: -75px; /* Shift the video upwards */
 }
 
 /* Responsive Adjustments */
@@ -6564,7 +6597,7 @@ flexibility(document.documentElement);
     width: 90%; /* Reduce width for smaller screens */
     max-width: 400px; /* Adjust the maximum width */
     top: -30px; /* Decrease upward shift */
-    left: 0; /* Center alignment for smaller screens */
+    left: 100px; /* Center alignment for smaller screens */
   }
 }
 
@@ -6867,8 +6900,8 @@ flexibility(document.documentElement);
                                 </div>
                             </div>
                         </div>
-                        <div class="elementor-element elementor-element-cd4be8c e-con-full e-flex e-con e-child"
-                            data-id="cd4be8c" data-element_type="container"
+                        <div class="elementor-element e-con-full e-flex e-con e-child"
+                            data-id="" data-element_type="container"
                             data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                             <div class="elementor-element elementor-element-483e3cc elementor-widget elementor-widget-image"
                                 data-id="483e3cc" data-element_type="widget"
@@ -7399,13 +7432,54 @@ flexibility(document.documentElement);
                                         data-widget_type="button.default">
                                         <div class="elementor-widget-container">
                                             <div class="elementor-button-wrapper">
-                                                <a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow"
+                                                <!-- <a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow"
                                                     href="" target="_blank"
                                                     rel="noopener">
                                                     <span class="elementor-button-content-wrapper">
                                                         <span class="elementor-button-text">Setup A Free Meeting</span>
                                                     </span>
-                                                </a>
+                                                </a> -->
+                                                <!-- Start of Meetings Embed Script -->
+    <!-- <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/wrapify?embed=true"></div>
+    <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script> -->
+  <!-- End of Meetings Embed Script -->
+ <a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow"
+  href="" target="_blank"
+  rel="noopener">
+  <span class="elementor-button-content-wrapper" id="setupMeetingButton">
+    <span class="elementor-button-text">Setup A Free Meeting</span>
+</span>
+
+</a>
+<div class="meetings-iframe-container" style="display: none;" id="meetingScheduler"></div>
+<script>
+    document.getElementById("setupMeetingButton").addEventListener("click", function (event) {
+      // Prevent any default behavior like page refresh or link navigation
+      event.preventDefault();
+  
+      // Get the meeting scheduler container
+      const iframeContainer = document.getElementById("meetingScheduler");
+  
+      // Check if the iframe is already added
+      if (!iframeContainer.querySelector("iframe")) {
+        // Create the iframe element dynamically
+        const iframe = document.createElement("iframe");
+        iframe.src = "https://meetings.hubspot.com/wrapify?embed=true"; // Replace with your HubSpot URL
+        iframe.width = "100%";
+        iframe.height = "600px";
+        iframe.style.border = "none";
+        iframeContainer.appendChild(iframe);
+      }
+  
+      // Make the iframe container visible
+      iframeContainer.style.display = "block";
+  
+      // Scroll to the iframe (optional for a smoother user experience)
+      iframeContainer.scrollIntoView({ behavior: "smooth" });
+    });
+  </script>
+  
+
                                             </div>
                                         </div>
                                     </div>
@@ -9929,10 +10003,39 @@ flexibility(document.documentElement);
                                 <div class="elementor-button-wrapper">
                                     <a class="elementor-button elementor-button-link elementor-size-sm"
                                         href="" target="_blank">
-                                        <span class="elementor-button-content-wrapper">
+                                        <span class="elementor-button-content-wrapper" id="setupMeetingButton">
                                             <span class="elementor-button-text">Setup A Free Meeting</span>
                                         </span>
                                     </a>
+                                    
+                                        <div class="meetings-iframe-container" style="display: none;" id="meetingScheduler"></div>
+                                        <script>
+                                            document.getElementById("setupMeetingButton").addEventListener("click", function (event) {
+                                              // Prevent any default behavior like page refresh or link navigation
+                                              event.preventDefault();
+                                          
+                                              // Get the meeting scheduler container
+                                              const iframeContainer = document.getElementById("meetingScheduler");
+                                          
+                                              // Check if the iframe is already added
+                                              if (!iframeContainer.querySelector("iframe")) {
+                                                // Create the iframe element dynamically
+                                                const iframe = document.createElement("iframe");
+                                                iframe.src = "https://meetings.hubspot.com/wrapify?embed=true"; // Replace with your HubSpot URL
+                                                iframe.width = "100%";
+                                                iframe.height = "600px";
+                                                iframe.style.border = "none";
+                                                iframeContainer.appendChild(iframe);
+                                              }
+                                          
+                                              // Make the iframe container visible
+                                              iframeContainer.style.display = "block";
+                                          
+                                              // Scroll to the iframe (optional for a smoother user experience)
+                                              iframeContainer.scrollIntoView({ behavior: "smooth" });
+                                            });
+                                          </script>
+                                 
                                 </div>
                             </div>
                         </div>
@@ -10262,7 +10365,7 @@ flexibility(document.documentElement);
                                             </h3>
 
                                             <p class="elementor-icon-box-description">
-                                                 6261697773 </p>
+                                                 +91-6261697773 </p>
 
                                         </div>
 
