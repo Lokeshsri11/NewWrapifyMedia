@@ -5069,15 +5069,10 @@ flexibility(document.documentElement);
                             <div class="elementor-widget-container">
                                 <!-- <div class="elementor-social-icons-wrapper elementor-grid">
                                     <span class="elementor-grid-item">
-                                        <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-eb4543d"
-                                            href="" target="_blank">
-                                            <span class="elementor-screen-only">Facebook-f</span>
-                                            <svg class="e-font-icon-svg e-fab-facebook-f" viewBox="0 0 320 512"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
-                                                </path>
-                                            </svg> </a>
+                                          <p class="social-links">
+          <a href="https://www.instagram.com/wrapifymedia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D" target="_blank"><i class="fa fa-instagram" aria-hidden="true" style="font-size:34px"></i></a>
+   
+        </p>
                                     </span>
                                     <span class="elementor-grid-item">
                                         <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-723990f"
@@ -6036,225 +6031,178 @@ flexibility(document.documentElement);
 
 <style>
     /* Base Styling */
-    body {
-      font-family: 'Babas Neue', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #01012B;
-      color: #333;
-    }
+body {
+  font-family: 'Babas Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #01012B;
+  color: #E6E6E6;
+}
 
-    .services-container {
-      max-width: 1200px;
-      margin: 50px auto;
-      padding: 20px;
-    }
+/* Services Container */
+.services-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
 
-    /* Header Styling */
-    .services-header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
+/* Header Styling */
+.services-header h1 {
+  color: #00FFFF;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
 
-    .services-header h1 {
-      font-size: 50px;
-      color: #E6E6E6;
-      margin-bottom: 10px;
-    }
+.services-header p {
+    color: #E6E6E6;
+  font-family: "Mulish", sans-serif;
+  font-size: 25px;
+  margin-bottom: 40px;
+}
 
-    .services-header p {
-      font-family: "Mulish", sans-serif;
-      font-size: 25px;
-      color: #E6E6E6;
-    }
+/* Service Cards Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
 
-    /* Service Card Styling */
-    .service-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: linear-gradient(135deg, #01012B, #09094e);
-      border-radius: 12px;
-      padding: 30px;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      margin-bottom: 40px;
-      position: relative;
-      overflow: hidden;
-      text-align: center;
-      color: #fff;
-    }
+/* Service Card Styling */
+.service-card {
+    background: linear-gradient(135deg, #002f3b, #03397b);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #E6E6E6;
+  text-align: left; /* Align text to the left for a clean look */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-    }
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
 
-    .service-card .icon {
-      font-size: 50px;
-      color: #ff7f50;
-      margin-bottom: 20px;
-      transition: transform 0.3s ease;
-    }
+.service-card .icon {
+  font-size: 50px;
+  color: #00FFFF;
+  margin-bottom: 10px;
+}
 
-    .service-card .icon:hover {
-      transform: scale(1.2);
-    }
+.service-card h2 {
+    color: #E6E6E6;
+  font-size: 28px;
+  position: relative;
+}
 
-    .service-card h2 {
-        color: #E6E6E6;
-      font-size: 32px;
-      margin-bottom: 15px;
-      position: relative;
-    }
+.service-card h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #00FFFF;
+}
 
-    /* Underline for Heading */
-    .service-card h2::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60%;
-      height: 2px;
-      background-color: #fff;
-    }
+.service-card p {
+  font-family: "Mulish", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 5px 0;
+}
 
-    .service-card p {
-      font-family: "Mulish", sans-serif;
-      font-size: 22px;
-      line-height: 1.8;
-      margin-bottom: 10px;
-    }
+.highlight {
+  color: #00FFFF;
+  font-weight: bold;
+}
 
-    /* Highlight Topics */
-    .highlight {
-      color: #d8d8d8;
-      font-weight: bold;
-      font-size: 25px;
-    }
+/* Divider Styling */
+.divider {
+  height: 2px;
+  background-color: #333;
+  margin: 40px 0;
+}
 
-    /* Divider Styling */
-    .divider {
-      height: 2px;
-      background-color: #ddd;
-      margin: 50px 0;
-    }
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-header h1 {
+    font-size: 40px;
+  }
 
-    /* Responsive Styling */
-    @media (max-width: 1024px) {
-      .services-header h1 {
-        font-size: 40px;
-      }
+  .service-card {
+    padding: 20px;
+  }
 
-      .service-card {
-        padding: 25px;
-      }
+  .service-card h2 {
+    font-size: 24px;
+  }
 
-      .service-card h2 {
-        font-size: 28px;
-      }
-    }
+  .service-card p {
+    font-size: 16px;
+  }
+}
 
-    @media (max-width: 768px) {
-      .services-header h1 {
-        font-size: 32px;
-      }
 
-      .service-card {
-        padding: 20px;
-      }
+</style>
 
-      .service-card h2 {
-        font-size: 24px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .services-header h1 {
-        font-size: 24px;
-      }
-
-      .service-card {
-        padding: 15px;
-      }
-
-      .service-card h2 {
-        font-size: 20px;
-      }
-
-      .service-card p {
-        font-size: 14px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="services-container">
+<div class="services-container">
     <!-- Header -->
     <div class="services-header">
       <h1>Our Services</h1>
       <p>Explore the range of services we offer to help your business thrive</p>
     </div>
-
+  
     <div class="divider"></div>
-
-    <div class="service-card">
-      <div class="icon">💬</div>
-      <h2>Social Media Management</h2>
-      <p><span class="highlight">Profile Management:</span> Oversee and maintain your social media profiles on platforms like Facebook, Instagram, Twitter, and LinkedIn.</p>
-      <p><span class="highlight">Content Scheduling:</span> Plan and schedule posts to maintain a consistent online presence, ensuring content is posted at optimal times for maximum engagement.</p>
-      <p><span class="highlight">Engagement:</span> Interact with followers by responding to comments, messages, and mentions to build a strong online community.</p>
+  
+    <!-- Services Grid -->
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon">💬</div>
+        <h2>Social Media Management</h2>
+        <p><span class="highlight">Profile Management:</span> Oversee and maintain your social media profiles on platforms like Facebook, Instagram, Twitter, and LinkedIn.</p>
+        <p><span class="highlight">Content Scheduling:</span> Plan and schedule posts to maintain a consistent online presence.</p>
+        <p><span class="highlight">Engagement:</span> Interact with followers by responding to comments and messages.</p>
+      </div>
+  
+      <div class="service-card">
+        <div class="icon">🎥</div>
+        <h2>Content Production</h2>
+        <p><span class="highlight">Creation:</span> Produce high-quality content like blog posts, videos, and infographics.</p>
+        <p><span class="highlight">Alignment:</span> Ensure all content aligns with your brand's messaging.</p>
+        <p><span class="highlight">Distribution:</span> Publish and distribute content to maximize reach.</p>
+      </div>
+  
+      <div class="service-card">
+        <div class="icon">📈</div>
+        <h2>Google Ads Campaign</h2>
+        <p><span class="highlight">Setup:</span> Create and configure Google Ads tailored to your objectives.</p>
+        <p><span class="highlight">Management:</span> Monitor and optimize campaigns for performance.</p>
+        <p><span class="highlight">Reporting:</span> Provide detailed performance reports.</p>
+      </div>
+  
+      <div class="service-card">
+        <div class="icon">📱</div>
+        <h2>Meta Ads Campaign</h2>
+        <p><span class="highlight">Design:</span> Create engaging ad creatives for Facebook and Instagram.</p>
+        <p><span class="highlight">Execution:</span> Use advanced targeting to reach the right audience.</p>
+        <p><span class="highlight">Optimization:</span> Regularly analyze and improve ad performance.</p>
+      </div>
+  
+      <div class="service-card">
+        <div class="icon">📝</div>
+        <h2>Content Strategy</h2>
+        <p><span class="highlight">Development:</span> Create a content strategy aligned with business goals.</p>
+        <p><span class="highlight">Planning:</span> Plan a content calendar with relevant topics and formats.</p>
+        <p><span class="highlight">Analysis:</span> Measure effectiveness and adjust strategies as needed.</p>
+      </div>
     </div>
-
-
-    <div class="divider"></div>
-
-    <div class="service-card">
-      <div class="icon">🎥</div>
-      <h2>Content Production</h2>
-      <p><span class="highlight">Creation:</span> Produce high-quality content such as blog posts, articles, videos, infographics, and social media posts that engage and inform your audience.</p>
-      <p><span class="highlight">Alignment:</span> Ensure all content aligns with your brand’s messaging, tone, and marketing objectives.</p>
-      <p><span class="highlight">Distribution:</span> Publish and distribute content across various channels to maximize reach and engagement.</p>
-    </div>
-
-   
-    <!-- Service Cards -->
-    <div class="service-card">
-      <div class="icon">📈</div>
-      <h2>Google Ads Campaign</h2>
-      <p><span class="highlight">Setup:</span> Create and configure Google Ads accounts, campaigns, ad groups, and ads tailored to your business objectives.</p>
-      <p><span class="highlight">Management:</span> Continuously monitor and adjust your ads for optimal performance, including keyword management, bid adjustments, and ad copy testing.</p>
-      <p><span class="highlight">Reporting:</span> Provide detailed reports on ad performance, including clickthrough rates (CTR), conversion rates, and return on ad spend (ROAS).</p>
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="service-card">
-      <div class="icon">📱</div>
-      <h2>Meta Ads Campaign</h2>
-      <p><span class="highlight">Design:</span> Create visually appealing and engaging ad creatives for Facebook and Instagram, including images, videos, and carousel ads.</p>
-      <p><span class="highlight">Execution:</span> Implement ad campaigns using advanced targeting options to reach specific demographics, interests, and behaviors.</p>
-      <p><span class="highlight">Optimization:</span> Regularly analyze and optimize ad performance by adjusting targeting, bidding strategies, and creatives to maximize ROI.</p>
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="service-card">
-      <div class="icon">📝</div>
-      <h2>Content Strategy</h2>
-      <p><span class="highlight">Development:</span> Create a comprehensive content strategy that aligns with your business goals, target audience, and brand voice.</p>
-      <p><span class="highlight">Planning:</span> Outline a content calendar with planned topics, formats, and publishing schedules to ensure consistency and relevance.</p>
-      <p><span class="highlight">Analysis:</span> Measure the effectiveness of your content strategy through analytics and adjust based on performance data and audience feedback.</p>
-    </div>
-
-    
   </div>
-
-</body>
-
-
+  
 
 
 
@@ -6351,15 +6299,10 @@ flexibility(document.documentElement);
                             <div class="elementor-widget-container">
                                 <div class="elementor-social-icons-wrapper elementor-grid">
                                     <span class="elementor-grid-item">
-                                        <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-eb4543d"
-                                            href="" target="_blank">
-                                            <span class="elementor-screen-only">Facebook-f</span>
-                                            <svg class="e-font-icon-svg e-fab-facebook-f" viewBox="0 0 320 512"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
-                                                </path>
-                                            </svg> </a>
+                                          <p class="social-links">
+          <a href="https://www.instagram.com/wrapifymedia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D" target="_blank"><i class="fa fa-instagram" aria-hidden="true" style="font-size:34px"></i></a>
+   
+        </p>
                                     </span>
                                     <!-- <span class="elementor-grid-item">
                                         <a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-repeater-item-723990f"
@@ -6521,8 +6464,8 @@ flexibility(document.documentElement);
                                             <span class="elementor-icon-list-text">Home</span>
                                         </a>
                                     </li>
-                                    <li class="elementor-icon-list-item">
-                                        <a href="">
+                                   <li class="elementor-icon-list-item">
+                                        <a href="/About.html">
 
                                             <span class="elementor-icon-list-icon">
                                                 <svg aria-hidden="true" class="e-font-icon-svg e-fas-caret-right"
@@ -6534,8 +6477,8 @@ flexibility(document.documentElement);
                                             <span class="elementor-icon-list-text">About</span>
                                         </a>
                                     </li>
-                                    <li class="elementor-icon-list-item">
-                                        <a href="">
+                                                                      <li class="elementor-icon-list-item">
+                                        <a href="/Services.html">
 
                                             <span class="elementor-icon-list-icon">
                                                 <svg aria-hidden="true" class="e-font-icon-svg e-fas-caret-right"
@@ -6548,7 +6491,7 @@ flexibility(document.documentElement);
                                         </a>
                                     </li>
                                     <li class="elementor-icon-list-item">
-                                        <a href="">
+                                        <a href="/FreeAudit.html">
 
                                             <span class="elementor-icon-list-icon">
                                                 <svg aria-hidden="true" class="e-font-icon-svg e-fas-caret-right"
@@ -6560,8 +6503,8 @@ flexibility(document.documentElement);
                                             <span class="elementor-icon-list-text">Free Audit</span>
                                         </a>
                                     </li>
-                                    <li class="elementor-icon-list-item">
-                                        <a href="">
+                                   <li class="elementor-icon-list-item">
+                                        <a href="/100Days.html">
 
                                             <span class="elementor-icon-list-icon">
                                                 <svg aria-hidden="true" class="e-font-icon-svg e-fas-caret-right"
@@ -6574,7 +6517,7 @@ flexibility(document.documentElement);
                                         </a>
                                     </li>
                                     <li class="elementor-icon-list-item">
-                                        <a href="">
+                                        <a href="/FAQ's.html">
 
                                             <span class="elementor-icon-list-icon">
                                                 <svg aria-hidden="true" class="e-font-icon-svg e-fas-caret-right"
@@ -6586,8 +6529,8 @@ flexibility(document.documentElement);
                                             <span class="elementor-icon-list-text">FAQ's</span>
                                         </a>
                                     </li>
-                                    <li class="elementor-icon-list-item">
-                                        <a href="">
+                                     <li class="elementor-icon-list-item">
+                                        <a href="/contactus.html">
 
                                             <span class="elementor-icon-list-icon">
                                                 <svg aria-hidden="true" class="e-font-icon-svg e-fas-caret-right"
@@ -6650,7 +6593,7 @@ flexibility(document.documentElement);
                                         </h3>
 
                                         <p class="elementor-icon-box-description">
-                                            +91-9192939495 </p>
+                                             6261697773 </p>
 
                                     </div>
 
