@@ -1285,11 +1285,25 @@
         }
 
         .elementor-widget-heading h2.elementor-heading-title {
-            line-height: 1.2em;
-            font-family: 'Babas Neue', 'sans-serif';
-            font-size: 60px;
-            
-        }
+  line-height: 1.2em;
+  font-family: 'Babas Neue', 'sans-serif';
+  font-size: 60px; /* Default font size for large screens */
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .elementor-widget-heading h2.elementor-heading-title {
+    font-size: 48px; /* Slightly smaller font for tablets */
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+  .elementor-widget-heading h2.elementor-heading-title {
+    font-size: 45px; /* Smaller font for phones */
+    line-height: 1.3em; /* Adjust line height for readability */
+  }
+}
 
         .elementor-widget-heading h3.elementor-heading-title {
             line-height: 1.3em;
@@ -7208,7 +7222,7 @@ flexibility(document.documentElement);
                                          Global Reach</h2>
                                          <br>
 
-                                            <p>Serving brands across <strong>India, USA, and Dubai</strong> with adaptable strategies</p>
+                                            <p>Serving brands across  <bold>India, USA, and Dubai</bold>with adaptable strategies</p>
                                     </div>
                                     </div>
                                   
