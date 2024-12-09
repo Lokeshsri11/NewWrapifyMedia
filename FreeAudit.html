@@ -6184,21 +6184,20 @@ flexibility(document.documentElement);
     <div class="details-form" id="detailsForm">
       <h2>Provide Additional Details</h2>
       <form action="https://formsubmit.co/2156446b385ed5565413cf8f32b9cc9b" method="POST">
-        <label for="name">Client Name:</label>
+        <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
+     
         <label for="phone">Phone Number:</label>
         <input type="tel" id="phone" name="phone" required>
 
-        <label for="name">Business Name:</label>
-        <input type="text" id="name" name="link" required>
+      
+        <label for="businessName">Business Name:</label>
+        <input type="text" id="businessName" name="businessName" readonly>
 
         <label for="location">Location:</label>
         <input type="text" id="location" name="location" required>
 
-       
-
-       
 
         <button type="submit">Submit Details</button>
       </form>
@@ -6210,7 +6209,7 @@ flexibility(document.documentElement);
     const linkForm = document.getElementById('linkSubmissionForm');
     const detailsForm = document.getElementById('detailsForm');
     const linkInput = document.getElementById('link');
-    const linkDetailsInput = document.getElementById('linkDetails');
+    const businessNameInput = document.getElementById('businessName');
     const submitLinkButton = document.getElementById('submitLink');
 
     // Handle Link Submission
@@ -6223,8 +6222,17 @@ flexibility(document.documentElement);
         return;
       }
 
-      // Update the second form's link field
-      linkDetailsInput.value = userLink;
+      // Extract the business name (e.g., domain or social handle)
+      let businessName = '';
+      try {
+        const url = new URL(userLink);
+        businessName = url.hostname.replace('www.', ''); // Extract domain without 'www.'
+      } catch (e) {
+        businessName = 'Invalid Business Name';
+      }
+
+      // Update the second form's business name field
+      businessNameInput.value = businessName;
 
       // Show the second form
       detailsForm.style.display = 'block';
@@ -6247,7 +6255,6 @@ flexibility(document.documentElement);
         });
     });
   </script>
-
 </body>
 
 
@@ -6373,7 +6380,9 @@ flexibility(document.documentElement);
                         <div class="elementor-element elementor-element-ea0063e elementor-widget elementor-widget-heading"
                             data-id="ea0063e" data-element_type="widget" data-widget_type="heading.default">
                             <div class="elementor-widget-container">
-                                <span class="elementor-heading-title elementor-size-default">Ready To Double Your Revenue</span>
+                                <span class="elementor-heading-title elementor-size-default">Ready To Make a Real
+                                    Change?<br>
+                                    Let's Build this Thing Together!</span>
                             </div>
                         </div>
                     </div>
