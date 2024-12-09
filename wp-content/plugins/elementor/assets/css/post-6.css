@@ -124,16 +124,16 @@ h1.entry-title {
         font-size: 16px;
     }
 
-    @media (max-width: 768px) {
-        .elementor-kit-6 h1 {
-            font-size: 6vw; /* Adjust font size for tablets and small screens */
-        }
+ @media (max-width: 768px) {
+    .elementor-kit-6 h1 {
+        font-size: 7vw; /* Adjust font size for tablets and small screens */
     }
-    
-    @media (max-width: 480px) {
-        .elementor-kit-6 h1 {
-            font-size: 7vw; /* Adjust font size for mobile devices */
-        }
+}
+
+@media (max-width: 480px) {
+    .elementor-kit-6 h1 {
+        font-size: 7vw; /* Adjust font size for mobile devices */
+    }
 
     .elementor-kit-6 button,.elementor-kit-6 input[type="button"],.elementor-kit-6 input[type="submit"],.elementor-kit-6 .elementor-button {
         font-size: 14px;
