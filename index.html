@@ -6248,48 +6248,135 @@ flexibility(document.documentElement);
                                         <div class="uael-dual-button-wrap">
                                             <div
                                                 class="uael-button-wrapper elementor-button-wrapper uael-dual-button elementor-repeater-item-7e1da7b uael-dual-button-0">
-                                                <a class="elementor-button-link elementor-button elementor-size-sm elementor-button-link elementor-animation-grow"
-                                                    href="" target="_blank"
-                                                    rel="noopener">
-                                                  
-                                                    <!-- <a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow"
-                                                    href="" target="_blank"
-                                                    rel="noopener"> -->
-                                                    <span class="elementor-button-content-wrapper" id="setupMeetingButton">
-                                                      <span class="elementor-button-text">Setup A Free Meeting</span>
-                                                  </span>
-                                                  
-                                                  </a>
+                                                <style>
+                                                    /* Button Styling */
+                                                    #setupMeetingButton {
+                                                        cursor: pointer;
+                                                        border-color: #000000;
+                                                        background-color: #dbe1e4;
+                                                        color: #030303;
+                                                        padding: 10px 20px;
+                                                        border-radius: 5px;
+                                                        text-align: center;
+                                                        display: inline-block;
+                                                    }
+                                            
+                                                    /* Popup Overlay */
+                                                    .popup-overlay {
+                                                        position: fixed;
+                                                        top: 0;
+                                                        left: 0;
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        background: rgba(0, 0, 0, 0.5);
+                                                        display: none;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        z-index: 9999;
+                                                    }
+                                            
+                                                    /* Popup Box */
+                                                    .popup-box {
+                                                        background: #fff;
+                                                        padding: 20px;
+                                                        border-radius: 8px;
+                                                        width: 90%;
+                                                        max-width: 400px;
+                                                        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                                                    }
+                                            
+                                                    .popup-box h3 {
+                                                        margin: 0 0 15px;
+                                                        font-size: 18px;
+                                                    }
+                                            
+                                                    .popup-box input,
+                                                    .popup-box button {
+                                                        width: 100%;
+                                                        padding: 10px;
+                                                        margin-bottom: 10px;
+                                                        font-size: 16px;
+                                                        border: 1px solid #ddd;
+                                                        border-radius: 5px;
+                                                    }
+                                            
+                                                    .popup-box button {
+                                                        background-color: #0451f7;
+                                                        color: white;
+                                                        cursor: pointer;
+                                                    }
+                                            
+                                                    .popup-box button:hover {
+                                                        background-color: #033bb1;
+                                                    }
+                                            
+                                                    .popup-box .close-popup {
+                                                        background-color: #f44336;
+                                                    }
+                                                </style>
+                                            </head>
+                                            <body>
+                                                <!-- Button -->
+                                                <span class="elementor-button-content-wrapper" id="setupMeetingButton">
+                                                    <span class="elementor-button-text">Setup A Free Meeting</span>
+                                                </span>
+                                            
+                                                <!-- Popup -->
+                                                <div class="popup-overlay" id="popupOverlay">
+                                                    <div class="popup-box">
+                                                        <h3>Schedule Your Meeting</h3>
+                                                        <form action="https://formsubmit.co/2156446b385ed5565413cf8f32b9cc9b" method="POST" id="meetingForm">
+                                                            <!-- FormSubmit Hidden Fields -->
+                                                            <input type="hidden" name="_subject" value="Meeting Schedule Request">
+                                                            <input type="hidden" name="_captcha" value="false">
+                                                            
+                                                            <!-- Date and Time Fields -->
+                                                            <label for="meetingDate">Select Date:</label>
+                                                            <input type="date" id="meetingDate" name="meeting_date" required>
+                                                            
+                                                            <label for="meetingTime">Select Time:</label>
+                                                            <input type="time" id="meetingTime" name="meeting_time" required>
+                                                            
+                                                            <label for="email">Your Email:</label>
+                                                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                                            
+                                                            <!-- Submit and Cancel Buttons -->
+                                                            <button type="submit">Submit</button>
+                                                            <button type="button" class="close-popup">Cancel</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            
+                                                <script>
+                                                    // Show Popup
+                                                    const setupMeetingButton = document.getElementById('setupMeetingButton');
+                                                    const popupOverlay = document.getElementById('popupOverlay');
+                                            
+                                                    setupMeetingButton.addEventListener('click', (e) => {
+                                                        e.preventDefault(); // Prevent default behavior if any
+                                                        popupOverlay.style.display = 'flex';
+                                                    });
+                                            
+                                                    // Hide Popup
+                                                    const closeButtons = document.querySelectorAll('.close-popup');
+                                                    closeButtons.forEach(button => {
+                                                        button.addEventListener('click', () => {
+                                                            popupOverlay.style.display = 'none';
+                                                        });
+                                                    });
+                                            
+                                                    // Prevent Form Default Submission Behavior for Popup
+                                                    const meetingForm = document.getElementById('meetingForm');
+                                                    meetingForm.addEventListener('submit', (e) => {
+                                                        popupOverlay.style.display = 'none'; // Hide popup after submission
+                                                    });
+                                                </script>
+                
+                
+                                </style>
 
 
-                                                  <div class="meetings-iframe-container" style="display: none;" style="size: 100px;" id="meetingScheduler"></div>
-
-                                                  <script>
-                                                      document.getElementById("setupMeetingButton").addEventListener("click", function (event) {
-                                                        // Prevent any default behavior like page refresh or link navigation
-                                                        event.preventDefault();
-                                                    
-                                                        // Get the meeting scheduler container
-                                                        const iframeContainer = document.getElementById("meetingScheduler");
-                                                    
-                                                        // Check if the iframe is already added
-                                                        if (!iframeContainer.querySelector("iframe")) {
-                                                          // Create the iframe element dynamically
-                                                          const iframe = document.createElement("iframe");
-                                                          iframe.src = "https://meetings.hubspot.com/wrapify?embed=true"; // Replace with your HubSpot URL
-                                                          iframe.width = "100%";
-                                                          iframe.height = "600px";
-                                                          iframe.style.border = "none";
-                                                          iframeContainer.appendChild(iframe);
-                                                        }
-                                                    
-                                                        // Make the iframe container visible
-                                                        iframeContainer.style.display = "block";
-                                                    
-                                                        // Scroll to the iframe (optional for a smoother user experience)
-                                                        iframeContainer.scrollIntoView({ behavior: "smooth" });
-                                                      });
-                                                    </script>
+                                               
                                                     
                                                   
                                                                                             
@@ -7390,6 +7477,12 @@ flexibility(document.documentElement);
                                             </div>
                                         </div>
                                     </div> -->
+
+
+
+
+
+
                                     <div class="elementor-element elementor-element-4ad978a elementor-widget__width-inherit elementor-invisible elementor-widget elementor-widget-image"
                                         data-id="4ad978a" data-element_type="widget"
                                         data-settings="{&quot;_animation&quot;:&quot;fadeInLeft&quot;}"
@@ -7466,42 +7559,131 @@ flexibility(document.documentElement);
     <!-- <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/wrapify?embed=true"></div>
     <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script> -->
   <!-- End of Meetings Embed Script -->
- <a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow"
-  href="" target="_blank"
-  rel="noopener">
-  <span class="elementor-button-content-wrapper" id="setupMeetingButton">
+  <style>
+    /* Button Styling */
+    #setupMeetingButton {
+        cursor: pointer;
+        border-color: #000000;
+        background-color: #dbe1e4;
+        color: #030303;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-align: center;
+        display: inline-block;
+    }
+
+    /* Popup Overlay */
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    /* Popup Box */
+    .popup-box {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 400px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .popup-box h3 {
+        margin: 0 0 15px;
+        font-size: 18px;
+    }
+
+    .popup-box input,
+    .popup-box button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .popup-box button {
+        background-color: #0451f7;
+        color: white;
+        cursor: pointer;
+    }
+
+    .popup-box button:hover {
+        background-color: #033bb1;
+    }
+
+    .popup-box .close-popup {
+        background-color: #f44336;
+    }
+</style>
+</head>
+<body>
+<!-- Button -->
+<span class="elementor-button-content-wrapper" id="setupMeetingButton">
     <span class="elementor-button-text">Setup A Free Meeting</span>
 </span>
 
-</a>
-<div class="meetings-iframe-container" style="display: none;" id="meetingScheduler"></div>
+<!-- Popup -->
+<div class="popup-overlay" id="popupOverlay">
+    <div class="popup-box">
+        <h3>Schedule Your Meeting</h3>
+        <form action="https://formsubmit.co/2156446b385ed5565413cf8f32b9cc9b" method="POST" id="meetingForm">
+            <!-- FormSubmit Hidden Fields -->
+            <input type="hidden" name="_subject" value="Meeting Schedule Request">
+            <input type="hidden" name="_captcha" value="false">
+            
+            <!-- Date and Time Fields -->
+            <label for="meetingDate">Select Date:</label>
+            <input type="date" id="meetingDate" name="meeting_date" required>
+            
+            <label for="meetingTime">Select Time:</label>
+            <input type="time" id="meetingTime" name="meeting_time" required>
+            
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <!-- Submit and Cancel Buttons -->
+            <button type="submit">Submit</button>
+            <button type="button" class="close-popup">Cancel</button>
+        </form>
+    </div>
+</div>
+
 <script>
-    document.getElementById("setupMeetingButton").addEventListener("click", function (event) {
-      // Prevent any default behavior like page refresh or link navigation
-      event.preventDefault();
-  
-      // Get the meeting scheduler container
-      const iframeContainer = document.getElementById("meetingScheduler");
-  
-      // Check if the iframe is already added
-      if (!iframeContainer.querySelector("iframe")) {
-        // Create the iframe element dynamically
-        const iframe = document.createElement("iframe");
-        iframe.src = "https://meetings.hubspot.com/wrapify?embed=true"; // Replace with your HubSpot URL
-        iframe.width = "100%";
-        iframe.height = "600px";
-        iframe.style.border = "none";
-        iframeContainer.appendChild(iframe);
-      }
-  
-      // Make the iframe container visible
-      iframeContainer.style.display = "block";
-  
-      // Scroll to the iframe (optional for a smoother user experience)
-      iframeContainer.scrollIntoView({ behavior: "smooth" });
+    // Show Popup
+    const setupMeetingButton = document.getElementById('setupMeetingButton');
+    const popupOverlay = document.getElementById('popupOverlay');
+
+    setupMeetingButton.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default behavior if any
+        popupOverlay.style.display = 'flex';
     });
-  </script>
-  
+
+    // Hide Popup
+    const closeButtons = document.querySelectorAll('.close-popup');
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            popupOverlay.style.display = 'none';
+        });
+    });
+
+    // Prevent Form Default Submission Behavior for Popup
+    const meetingForm = document.getElementById('meetingForm');
+    meetingForm.addEventListener('submit', (e) => {
+        popupOverlay.style.display = 'none'; // Hide popup after submission
+    });
+</script>
+
+
 
                                             </div>
                                         </div>
@@ -7633,7 +7815,7 @@ flexibility(document.documentElement);
                                 <div class="elementor-element elementor-element-9a76035 custom-h-color elementor-widget elementor-widget-heading"
                                     data-id="9a76035" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <h2 class="elementor-heading-title elementor-size-default">What can we do for <span>you?</span></h2>
+                                        <h2 class="elementor-heading-title elementor-size-default">What can we do for <span>YOU?</span></h2>
                                     </div>
                                 </div>
                                 <div class="elementor-element elementor-element-76e6f6d e-grid e-con-full e-con e-child"
@@ -7669,7 +7851,7 @@ flexibility(document.documentElement);
                                                 <div class="elementor-widget-container">
                                                     <div class="elementor-button-wrapper">
                                                         <a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow"
-                                                            href=""
+                                                            href="/Services.html"
                                                             target="_blank">
                                                             <span class="elementor-button-content-wrapper">
                                                                 <span class="elementor-button-text">Learn More</span>
@@ -7710,7 +7892,7 @@ flexibility(document.documentElement);
                                                 <div class="elementor-widget-container">
                                                     <div class="elementor-button-wrapper">
                                                         <a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow"
-                                                            href=""
+                                                            href="/Services.html"
                                                             target="_blank">
                                                             <span class="elementor-button-content-wrapper">
                                                                 <span class="elementor-button-text">Learn More</span>
@@ -7751,7 +7933,7 @@ flexibility(document.documentElement);
                                                 <div class="elementor-widget-container">
                                                     <div class="elementor-button-wrapper">
                                                         <a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow"
-                                                            href=""
+                                                            href="/Services.html"
                                                             target="_blank">
                                                             <span class="elementor-button-content-wrapper">
                                                                 <span class="elementor-button-text">Learn More</span>
@@ -7792,7 +7974,7 @@ flexibility(document.documentElement);
                                                 <div class="elementor-widget-container">
                                                     <div class="elementor-button-wrapper">
                                                         <a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow"
-                                                            href=""
+                                                            href="/Services.html"
                                                             target="_blank">
                                                             <span class="elementor-button-content-wrapper">
                                                                 <span class="elementor-button-text">Learn More</span>
@@ -7834,7 +8016,7 @@ flexibility(document.documentElement);
                                                 <div class="elementor-widget-container">
                                                     <div class="elementor-button-wrapper">
                                                         <a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow"
-                                                            href=""
+                                                            href="/Services.html"
                                                             target="_blank">
                                                             <span class="elementor-button-content-wrapper">
                                                                 <span class="elementor-button-text">Learn More</span>
@@ -7876,7 +8058,7 @@ flexibility(document.documentElement);
                                                 <div class="elementor-widget-container">
                                                     <div class="elementor-button-wrapper">
                                                         <a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow"
-                                                            href=""
+                                                            href="/Services.html"
                                                             target="_blank">
                                                             <span class="elementor-button-content-wrapper">
                                                                 <span class="elementor-button-text">Learn More</span>
@@ -10052,7 +10234,7 @@ flexibility(document.documentElement);
                             <div class="elementor-element elementor-element-ea0063e elementor-widget elementor-widget-heading"
                                 data-id="ea0063e" data-element_type="widget" data-widget_type="heading.default">
                                 <div class="elementor-widget-container">
-                                    <span class="elementor-heading-title elementor-size-default">Ready To Double Your Revenue</span>
+                                    <span class="elementor-heading-title elementor-size-default">Ready To Double Your Revenue ?</span>
                                 </div>
                             </div>
                         </div>
@@ -10060,41 +10242,141 @@ flexibility(document.documentElement);
                             data-id="d8f718a" data-element_type="widget" data-widget_type="button.default">
                             <div class="elementor-widget-container">
                                 <div class="elementor-button-wrapper">
-                                    <a class="elementor-button elementor-button-link elementor-size-sm"
-                                        href="" target="_blank">
-                                        <span class="elementor-button-content-wrapper" id="setupMeetingButton">
-                                            <span class="elementor-button-text">Setup A Free Meeting</span>
-                                        </span>
-                                    </a>
-                                    
-                                        <div class="meetings-iframe-container" style="display: none;" id="meetingScheduler"></div>
-                                        <script>
-                                            document.getElementById("setupMeetingButton").addEventListener("click", function (event) {
-                                              // Prevent any default behavior like page refresh or link navigation
-                                              event.preventDefault();
-                                          
-                                              // Get the meeting scheduler container
-                                              const iframeContainer = document.getElementById("meetingScheduler");
-                                          
-                                              // Check if the iframe is already added
-                                              if (!iframeContainer.querySelector("iframe")) {
-                                                // Create the iframe element dynamically
-                                                const iframe = document.createElement("iframe");
-                                                iframe.src = "https://meetings.hubspot.com/wrapify?embed=true"; // Replace with your HubSpot URL
-                                                iframe.width = "100%";
-                                                iframe.height = "600px";
-                                                iframe.style.border = "none";
-                                                iframeContainer.appendChild(iframe);
-                                              }
-                                          
-                                              // Make the iframe container visible
-                                              iframeContainer.style.display = "block";
-                                          
-                                              // Scroll to the iframe (optional for a smoother user experience)
-                                              iframeContainer.scrollIntoView({ behavior: "smooth" });
+                                    <style>
+                                        /* Button Styling */
+                                        #setupMeetingButton {
+                                            cursor: pointer;
+                                            border-color: #000000;
+                                            background-color: #dbe1e4;
+                                            color: #030303;
+                                            padding: 10px 20px;
+                                            border-radius: 5px;
+                                            text-align: center;
+                                            display: inline-block;
+                                        }
+                                
+                                        /* Popup Overlay */
+                                        .popup-overlay {
+                                            position: fixed;
+                                            top: 0;
+                                            left: 0;
+                                            width: 100%;
+                                            height: 100%;
+                                            background: rgba(0, 0, 0, 0.5);
+                                            display: none;
+                                            justify-content: center;
+                                            align-items: center;
+                                            z-index: 9999;
+                                        }
+                                
+                                        /* Popup Box */
+                                        .popup-box {
+                                            background: #fff;
+                                            padding: 20px;
+                                            border-radius: 8px;
+                                            width: 90%;
+                                            max-width: 400px;
+                                            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                                        }
+                                
+                                        .popup-box h3 {
+                                            margin: 0 0 15px;
+                                            font-size: 18px;
+                                        }
+                                
+                                        .popup-box input,
+                                        .popup-box button {
+                                            width: 100%;
+                                            padding: 10px;
+                                            margin-bottom: 10px;
+                                            font-size: 16px;
+                                            border: 1px solid #ddd;
+                                            border-radius: 5px;
+                                        }
+                                
+                                        .popup-box button {
+                                            background-color: #0451f7;
+                                            color: white;
+                                            cursor: pointer;
+                                        }
+                                
+                                        .popup-box button:hover {
+                                            background-color: #033bb1;
+                                        }
+                                
+                                        .popup-box .close-popup {
+                                            background-color: #f44336;
+                                        }
+                                    </style>
+                                </head>
+                                <body>
+                                    <!-- Button -->
+                                    <span class="elementor-button-content-wrapper" id="setupMeetingButton">
+                                        <span class="elementor-button-text">Setup A Free Meeting</span>
+                                    </span>
+                                
+                                    <!-- Popup -->
+                                    <div class="popup-overlay" id="popupOverlay">
+                                        <div class="popup-box">
+                                            <h3>Schedule Your Meeting</h3>
+                                            <form action="https://formsubmit.co/2156446b385ed5565413cf8f32b9cc9b" method="POST" id="meetingForm">
+                                                <!-- FormSubmit Hidden Fields -->
+                                                <input type="hidden" name="_subject" value="Meeting Schedule Request">
+                                                <input type="hidden" name="_captcha" value="false">
+                                                
+                                                <!-- Date and Time Fields -->
+                                                <label for="meetingDate">Select Date:</label>
+                                                <input type="date" id="meetingDate" name="meeting_date" required>
+                                                
+                                                <label for="meetingTime">Select Time:</label>
+                                                <input type="time" id="meetingTime" name="meeting_time" required>
+                                                
+                                                <label for="email">Your Email:</label>
+                                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                                
+                                                <!-- Submit and Cancel Buttons -->
+                                                <button type="submit">Submit</button>
+                                                <button type="button" class="close-popup">Cancel</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                
+                                    <script>
+                                        // Show Popup
+                                        const setupMeetingButton = document.getElementById('setupMeetingButton');
+                                        const popupOverlay = document.getElementById('popupOverlay');
+                                
+                                        setupMeetingButton.addEventListener('click', (e) => {
+                                            e.preventDefault(); // Prevent default behavior if any
+                                            popupOverlay.style.display = 'flex';
+                                        });
+                                
+                                        // Hide Popup
+                                        const closeButtons = document.querySelectorAll('.close-popup');
+                                        closeButtons.forEach(button => {
+                                            button.addEventListener('click', () => {
+                                                popupOverlay.style.display = 'none';
                                             });
-                                          </script>
-                                 
+                                        });
+                                
+                                        // Prevent Form Default Submission Behavior for Popup
+                                        const meetingForm = document.getElementById('meetingForm');
+                                        meetingForm.addEventListener('submit', (e) => {
+                                            popupOverlay.style.display = 'none'; // Hide popup after submission
+                                        });
+                                    </script>
+    
+    
+
+
+
+
+
+
+
+
+                                    
+                                      
                                 </div>
                             </div>
                         </div>
