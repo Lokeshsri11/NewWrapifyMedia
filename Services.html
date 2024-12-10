@@ -6030,7 +6030,7 @@ flexibility(document.documentElement);
 
 
 <style>
-    /* Base Styling */
+/* Base Styling */
 body {
   font-family: 'Babas Neue', sans-serif;
   margin: 0;
@@ -6055,7 +6055,7 @@ body {
 }
 
 .services-header p {
-    color: #E6E6E6;
+  color: #E6E6E6;
   font-family: "Mulish", sans-serif;
   font-size: 25px;
   margin-bottom: 40px;
@@ -6064,13 +6064,13 @@ body {
 /* Service Cards Grid */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* 4 cards per row */
   gap: 30px;
 }
 
 /* Service Card Styling */
 .service-card {
-    background: linear-gradient(135deg, #002f3b, #03397b);
+  background: linear-gradient(135deg, #002f3b, #03397b);
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
@@ -6094,7 +6094,7 @@ body {
 }
 
 .service-card h2 {
-    color: #E6E6E6;
+  color: #E6E6E6;
   font-size: 28px;
   position: relative;
 }
@@ -6129,7 +6129,17 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  }
+}
+
 @media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+
   .services-header h1 {
     font-size: 40px;
   }
@@ -6144,6 +6154,12 @@ body {
 
   .service-card p {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
   }
 }
 
@@ -6750,8 +6766,8 @@ body {
                             data-id="774b591" data-element_type="widget" data-widget_type="button.default">
                             <div class="elementor-widget-container">
                                 <div class="elementor-button-wrapper">
-                                    <a class="elementor-button elementor-button-link elementor-size-sm"
-                                        href="" target="_blank">
+                                      <a class="elementor-button elementor-button-link elementor-size-sm"
+                                        href="/contactus.html" target="_blank">
                                         <span class="elementor-button-content-wrapper">
                                             <span class="elementor-button-text">Get Started</span>
                                         </span>
