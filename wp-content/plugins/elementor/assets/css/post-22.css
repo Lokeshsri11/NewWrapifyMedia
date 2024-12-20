@@ -110,7 +110,7 @@
   
   @media (max-width: 480px) { /* Mobile */
     .elementor-22 .elementor-element.elementor-element-32e769e .elementor-heading-title {
-      font-size: 20px; /* Smaller font size for mobile */
+      font-size: 17px; /* Smaller font size for mobile */
       height: auto; /* Remove fixed height for smaller screens */
       white-space: normal; /* Allow text wrapping on small devices */
       padding-left: 15px;
