@@ -101,17 +101,19 @@
 /* Responsive Adjustments */
 @media (max-width: 768px) { /* Tablets */
     .elementor-22 .elementor-element.elementor-element-32e769e .elementor-heading-title {
-      font-size: 16px; /* Smaller font size for tablets */
+      font-size: 17px; /* Smaller font size for tablets */
       height: 150px; /* Adjust height */
       max-width: 90%; /* Use a percentage for fluid width */
+      padding-left: 20px;
     }
   }
   
   @media (max-width: 480px) { /* Mobile */
     .elementor-22 .elementor-element.elementor-element-32e769e .elementor-heading-title {
-      font-size: 14px; /* Smaller font size for mobile */
+      font-size: 17px; /* Smaller font size for mobile */
       height: auto; /* Remove fixed height for smaller screens */
       white-space: normal; /* Allow text wrapping on small devices */
+      padding-left: 15px;
     }
   }
   

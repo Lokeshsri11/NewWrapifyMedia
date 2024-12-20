@@ -127,12 +127,14 @@ h1.entry-title {
  @media (max-width: 768px) {
     .elementor-kit-6 h1 {
         font-size: 7vw; /* Adjust font size for tablets and small screens */
+        margin-top: -60px;
     }
 }
 
 @media (max-width: 480px) {
     .elementor-kit-6 h1 {
         font-size: 7vw; /* Adjust font size for mobile devices */
+        margin-top: -60px;
     }
 
     .elementor-kit-6 button,.elementor-kit-6 input[type="button"],.elementor-kit-6 input[type="submit"],.elementor-kit-6 .elementor-button {
